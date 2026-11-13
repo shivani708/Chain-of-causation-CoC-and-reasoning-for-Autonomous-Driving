@@ -7,3 +7,4 @@
 *.mp4
 __pycache__/
 *.pyc
+!media/*.mp4
