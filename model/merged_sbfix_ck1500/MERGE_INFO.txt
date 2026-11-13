@@ -1,0 +1,2 @@
+base: /data/common_datasets/ai24mtech02003/24_dataset_coc/models/merged_rft_ck500
+adapter: /data/common_datasets/ai24mtech02003/24_dataset_coc/models/lora_sbfix_v1/checkpoint-1500

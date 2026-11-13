@@ -1,0 +1,8 @@
+RFT data: the 68.6 model's own best-judged answers on LingoQA TRAIN questions
+
+questions: 10000   samples per question: 8   mean pass rate per question: 0.495
+kept: 8490 (train 8190, val 300)   mean answer words: 27.9
+    6773  kept (plain)
+    1717  kept (format)
+    1227  no correct sample (plain)
+     283  no correct sample (format)

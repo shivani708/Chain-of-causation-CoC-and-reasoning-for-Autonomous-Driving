@@ -1,0 +1,208 @@
+# Training log started 2026-11-10T19:12:01.107159
+step=10 | epoch=0.007 | loss=0.555364 | grad_norm=3.576305 | learning_rate=0.000006 | epoch=0.006614
+step=20 | epoch=0.013 | loss=0.549550 | grad_norm=2.511655 | learning_rate=0.000013 | epoch=0.013229
+step=30 | epoch=0.020 | loss=0.573781 | grad_norm=2.745404 | learning_rate=0.000019 | epoch=0.019843
+step=40 | epoch=0.026 | loss=0.545323 | grad_norm=2.636315 | learning_rate=0.000020 | epoch=0.026457
+step=50 | epoch=0.033 | loss=0.511819 | grad_norm=2.633510 | learning_rate=0.000020 | epoch=0.033072
+step=60 | epoch=0.040 | loss=0.501725 | grad_norm=3.214678 | learning_rate=0.000020 | epoch=0.039686
+step=70 | epoch=0.046 | loss=0.558952 | grad_norm=2.015955 | learning_rate=0.000020 | epoch=0.046300
+step=80 | epoch=0.053 | loss=0.529746 | grad_norm=2.226750 | learning_rate=0.000020 | epoch=0.052914
+step=90 | epoch=0.060 | loss=0.508056 | grad_norm=1.993259 | learning_rate=0.000020 | epoch=0.059529
+step=100 | epoch=0.066 | loss=0.545082 | grad_norm=2.809836 | learning_rate=0.000020 | epoch=0.066143
+step=110 | epoch=0.073 | loss=0.518227 | grad_norm=2.446499 | learning_rate=0.000020 | epoch=0.072757
+step=120 | epoch=0.079 | loss=0.576947 | grad_norm=2.362634 | learning_rate=0.000020 | epoch=0.079372
+step=130 | epoch=0.086 | loss=0.522167 | grad_norm=1.875935 | learning_rate=0.000020 | epoch=0.085986
+step=140 | epoch=0.093 | loss=0.570396 | grad_norm=2.137093 | learning_rate=0.000020 | epoch=0.092600
+step=150 | epoch=0.099 | loss=0.519697 | grad_norm=1.927623 | learning_rate=0.000020 | epoch=0.099215
+step=150 | epoch=0.099 | eval_loss=0.676037 | eval_runtime=66.240500 | eval_samples_per_second=13.542000 | eval_steps_per_second=1.706000 | epoch=0.099215
+step=150 | epoch=0.099 | eval_coc_delhi_loss=0.619969 | eval_coc_delhi_runtime=20.466800 | eval_coc_delhi_samples_per_second=14.658000 | eval_coc_delhi_steps_per_second=1.857000 | epoch=0.099215
+step=150 | epoch=0.099 | eval_coc_kota_out_loss=0.795452 | eval_coc_kota_out_runtime=22.840100 | eval_coc_kota_out_samples_per_second=13.003000 | eval_coc_kota_out_steps_per_second=1.664000 | epoch=0.099215
+step=150 | epoch=0.099 | eval_mix_open_loss=0.618446 | eval_mix_open_runtime=29.221700 | eval_mix_open_samples_per_second=10.266000 | eval_mix_open_steps_per_second=1.300000 | epoch=0.099215
+step=150 | epoch=0.099 | eval_loss=0.676037 | eval_runtime=66.240500 | eval_samples_per_second=13.542000 | eval_steps_per_second=1.706000 | epoch=0.099215 | eval_coc_delhi_loss=0.619969 | eval_coc_delhi_runtime=20.466800 | eval_coc_delhi_samples_per_second=14.658000 | eval_coc_delhi_steps_per_second=1.857000 | eval_coc_kota_out_loss=0.795452 | eval_coc_kota_out_runtime=22.840100 | eval_coc_kota_out_samples_per_second=13.003000 | eval_coc_kota_out_steps_per_second=1.664000 | eval_mix_open_loss=0.618446 | eval_mix_open_runtime=29.221700 | eval_mix_open_samples_per_second=10.266000 | eval_mix_open_steps_per_second=1.300000
+step=160 | epoch=0.106 | loss=0.542684 | grad_norm=2.092292 | learning_rate=0.000020 | epoch=0.105829
+step=170 | epoch=0.112 | loss=0.525764 | grad_norm=1.851185 | learning_rate=0.000020 | epoch=0.112443
+step=180 | epoch=0.119 | loss=0.503086 | grad_norm=1.785888 | learning_rate=0.000020 | epoch=0.119057
+step=190 | epoch=0.126 | loss=0.517511 | grad_norm=2.085154 | learning_rate=0.000019 | epoch=0.125672
+step=200 | epoch=0.132 | loss=0.531262 | grad_norm=1.647239 | learning_rate=0.000019 | epoch=0.132286
+step=210 | epoch=0.139 | loss=0.569513 | grad_norm=2.277722 | learning_rate=0.000019 | epoch=0.138900
+step=220 | epoch=0.146 | loss=0.518688 | grad_norm=1.391871 | learning_rate=0.000019 | epoch=0.145515
+step=230 | epoch=0.152 | loss=0.549768 | grad_norm=1.726658 | learning_rate=0.000019 | epoch=0.152129
+step=240 | epoch=0.159 | loss=0.525975 | grad_norm=2.004006 | learning_rate=0.000019 | epoch=0.158743
+step=250 | epoch=0.165 | loss=0.591333 | grad_norm=1.612498 | learning_rate=0.000019 | epoch=0.165358
+step=260 | epoch=0.172 | loss=0.568297 | grad_norm=2.013842 | learning_rate=0.000019 | epoch=0.171972
+step=270 | epoch=0.179 | loss=0.565183 | grad_norm=1.586092 | learning_rate=0.000019 | epoch=0.178586
+step=280 | epoch=0.185 | loss=0.524055 | grad_norm=1.672793 | learning_rate=0.000019 | epoch=0.185200
+step=290 | epoch=0.192 | loss=0.520498 | grad_norm=1.817731 | learning_rate=0.000019 | epoch=0.191815
+step=300 | epoch=0.198 | loss=0.525007 | grad_norm=1.403836 | learning_rate=0.000018 | epoch=0.198429
+step=300 | epoch=0.198 | eval_loss=0.675405 | eval_runtime=78.246700 | eval_samples_per_second=11.464000 | eval_steps_per_second=1.444000 | epoch=0.198429
+step=300 | epoch=0.198 | eval_coc_delhi_loss=0.626270 | eval_coc_delhi_runtime=21.682100 | eval_coc_delhi_samples_per_second=13.836000 | eval_coc_delhi_steps_per_second=1.753000 | epoch=0.198429
+step=300 | epoch=0.198 | eval_coc_kota_out_loss=0.788338 | eval_coc_kota_out_runtime=28.111400 | eval_coc_kota_out_samples_per_second=10.565000 | eval_coc_kota_out_steps_per_second=1.352000 | epoch=0.198429
+step=300 | epoch=0.198 | eval_mix_open_loss=0.618421 | eval_mix_open_runtime=29.318200 | eval_mix_open_samples_per_second=10.233000 | eval_mix_open_steps_per_second=1.296000 | epoch=0.198429
+step=300 | epoch=0.198 | eval_loss=0.675405 | eval_runtime=78.246700 | eval_samples_per_second=11.464000 | eval_steps_per_second=1.444000 | epoch=0.198429 | eval_coc_delhi_loss=0.626270 | eval_coc_delhi_runtime=21.682100 | eval_coc_delhi_samples_per_second=13.836000 | eval_coc_delhi_steps_per_second=1.753000 | eval_coc_kota_out_loss=0.788338 | eval_coc_kota_out_runtime=28.111400 | eval_coc_kota_out_samples_per_second=10.565000 | eval_coc_kota_out_steps_per_second=1.352000 | eval_mix_open_loss=0.618421 | eval_mix_open_runtime=29.318200 | eval_mix_open_samples_per_second=10.233000 | eval_mix_open_steps_per_second=1.296000
+step=310 | epoch=0.205 | loss=0.517714 | grad_norm=1.635986 | learning_rate=0.000018 | epoch=0.205043
+step=320 | epoch=0.212 | loss=0.518380 | grad_norm=1.467751 | learning_rate=0.000018 | epoch=0.211658
+step=330 | epoch=0.218 | loss=0.516088 | grad_norm=2.452634 | learning_rate=0.000018 | epoch=0.218272
+step=340 | epoch=0.225 | loss=0.539737 | grad_norm=1.669898 | learning_rate=0.000018 | epoch=0.224886
+step=350 | epoch=0.232 | loss=0.496290 | grad_norm=1.276409 | learning_rate=0.000018 | epoch=0.231501
+step=360 | epoch=0.238 | loss=0.548707 | grad_norm=1.550144 | learning_rate=0.000018 | epoch=0.238115
+step=370 | epoch=0.245 | loss=0.548723 | grad_norm=1.533298 | learning_rate=0.000018 | epoch=0.244729
+step=380 | epoch=0.251 | loss=0.531559 | grad_norm=1.695834 | learning_rate=0.000017 | epoch=0.251344
+step=390 | epoch=0.258 | loss=0.553729 | grad_norm=1.324618 | learning_rate=0.000017 | epoch=0.257958
+step=400 | epoch=0.265 | loss=0.549961 | grad_norm=1.421045 | learning_rate=0.000017 | epoch=0.264572
+step=410 | epoch=0.271 | loss=0.529250 | grad_norm=1.591970 | learning_rate=0.000017 | epoch=0.271186
+step=420 | epoch=0.278 | loss=0.584393 | grad_norm=1.641485 | learning_rate=0.000017 | epoch=0.277801
+step=430 | epoch=0.284 | loss=0.528911 | grad_norm=1.357282 | learning_rate=0.000017 | epoch=0.284415
+step=440 | epoch=0.291 | loss=0.496270 | grad_norm=1.731250 | learning_rate=0.000016 | epoch=0.291029
+step=450 | epoch=0.298 | loss=0.542164 | grad_norm=1.614226 | learning_rate=0.000016 | epoch=0.297644
+step=450 | epoch=0.298 | eval_loss=0.676647 | eval_runtime=74.472900 | eval_samples_per_second=12.045000 | eval_steps_per_second=1.517000 | epoch=0.297644
+step=450 | epoch=0.298 | eval_coc_delhi_loss=0.636630 | eval_coc_delhi_runtime=20.856500 | eval_coc_delhi_samples_per_second=14.384000 | eval_coc_delhi_steps_per_second=1.822000 | epoch=0.297644
+step=450 | epoch=0.298 | eval_coc_kota_out_loss=0.782481 | eval_coc_kota_out_runtime=26.932300 | eval_coc_kota_out_samples_per_second=11.028000 | eval_coc_kota_out_steps_per_second=1.411000 | epoch=0.297644
+step=450 | epoch=0.298 | eval_mix_open_loss=0.616504 | eval_mix_open_runtime=30.795900 | eval_mix_open_samples_per_second=9.742000 | eval_mix_open_steps_per_second=1.234000 | epoch=0.297644
+step=450 | epoch=0.298 | eval_loss=0.676647 | eval_runtime=74.472900 | eval_samples_per_second=12.045000 | eval_steps_per_second=1.517000 | epoch=0.297644 | eval_coc_delhi_loss=0.636630 | eval_coc_delhi_runtime=20.856500 | eval_coc_delhi_samples_per_second=14.384000 | eval_coc_delhi_steps_per_second=1.822000 | eval_coc_kota_out_loss=0.782481 | eval_coc_kota_out_runtime=26.932300 | eval_coc_kota_out_samples_per_second=11.028000 | eval_coc_kota_out_steps_per_second=1.411000 | eval_mix_open_loss=0.616504 | eval_mix_open_runtime=30.795900 | eval_mix_open_samples_per_second=9.742000 | eval_mix_open_steps_per_second=1.234000
+step=460 | epoch=0.304 | loss=0.530506 | grad_norm=1.308070 | learning_rate=0.000016 | epoch=0.304258
+step=470 | epoch=0.311 | loss=0.559415 | grad_norm=1.564514 | learning_rate=0.000016 | epoch=0.310872
+step=480 | epoch=0.317 | loss=0.538940 | grad_norm=1.354646 | learning_rate=0.000016 | epoch=0.317487
+step=490 | epoch=0.324 | loss=0.521986 | grad_norm=1.541852 | learning_rate=0.000016 | epoch=0.324101
+step=500 | epoch=0.331 | loss=0.572677 | grad_norm=1.727804 | learning_rate=0.000015 | epoch=0.330715
+step=510 | epoch=0.337 | loss=0.542501 | grad_norm=1.417893 | learning_rate=0.000015 | epoch=0.337329
+step=520 | epoch=0.344 | loss=0.478301 | grad_norm=1.331421 | learning_rate=0.000015 | epoch=0.343944
+step=530 | epoch=0.351 | loss=0.511603 | grad_norm=1.416293 | learning_rate=0.000015 | epoch=0.350558
+step=540 | epoch=0.357 | loss=0.536212 | grad_norm=1.494229 | learning_rate=0.000015 | epoch=0.357172
+step=550 | epoch=0.364 | loss=0.529081 | grad_norm=1.304056 | learning_rate=0.000015 | epoch=0.363787
+step=560 | epoch=0.370 | loss=0.507075 | grad_norm=1.459951 | learning_rate=0.000014 | epoch=0.370401
+step=570 | epoch=0.377 | loss=0.475155 | grad_norm=1.234176 | learning_rate=0.000014 | epoch=0.377015
+step=580 | epoch=0.384 | loss=0.480864 | grad_norm=1.115093 | learning_rate=0.000014 | epoch=0.383630
+step=590 | epoch=0.390 | loss=0.496519 | grad_norm=1.395902 | learning_rate=0.000014 | epoch=0.390244
+step=600 | epoch=0.397 | loss=0.481328 | grad_norm=1.123363 | learning_rate=0.000014 | epoch=0.396858
+step=600 | epoch=0.397 | eval_loss=0.674960 | eval_runtime=78.052300 | eval_samples_per_second=11.492000 | eval_steps_per_second=1.448000 | epoch=0.396858
+step=600 | epoch=0.397 | eval_coc_delhi_loss=0.631847 | eval_coc_delhi_runtime=20.717500 | eval_coc_delhi_samples_per_second=14.481000 | eval_coc_delhi_steps_per_second=1.834000 | epoch=0.396858
+step=600 | epoch=0.397 | eval_coc_kota_out_loss=0.788552 | eval_coc_kota_out_runtime=30.120400 | eval_coc_kota_out_samples_per_second=9.860000 | eval_coc_kota_out_steps_per_second=1.262000 | epoch=0.396858
+step=600 | epoch=0.397 | eval_mix_open_loss=0.611270 | eval_mix_open_runtime=30.862100 | eval_mix_open_samples_per_second=9.721000 | eval_mix_open_steps_per_second=1.231000 | epoch=0.396858
+step=600 | epoch=0.397 | eval_loss=0.674960 | eval_runtime=78.052300 | eval_samples_per_second=11.492000 | eval_steps_per_second=1.448000 | epoch=0.396858 | eval_coc_delhi_loss=0.631847 | eval_coc_delhi_runtime=20.717500 | eval_coc_delhi_samples_per_second=14.481000 | eval_coc_delhi_steps_per_second=1.834000 | eval_coc_kota_out_loss=0.788552 | eval_coc_kota_out_runtime=30.120400 | eval_coc_kota_out_samples_per_second=9.860000 | eval_coc_kota_out_steps_per_second=1.262000 | eval_mix_open_loss=0.611270 | eval_mix_open_runtime=30.862100 | eval_mix_open_samples_per_second=9.721000 | eval_mix_open_steps_per_second=1.231000
+step=610 | epoch=0.403 | loss=0.518855 | grad_norm=1.377738 | learning_rate=0.000013 | epoch=0.403473
+step=620 | epoch=0.410 | loss=0.540778 | grad_norm=1.471386 | learning_rate=0.000013 | epoch=0.410087
+step=630 | epoch=0.417 | loss=0.554686 | grad_norm=1.444176 | learning_rate=0.000013 | epoch=0.416701
+step=640 | epoch=0.423 | loss=0.518085 | grad_norm=1.616312 | learning_rate=0.000013 | epoch=0.423315
+step=650 | epoch=0.430 | loss=0.492027 | grad_norm=1.377246 | learning_rate=0.000013 | epoch=0.429930
+step=660 | epoch=0.437 | loss=0.553947 | grad_norm=1.243620 | learning_rate=0.000012 | epoch=0.436544
+step=670 | epoch=0.443 | loss=0.491270 | grad_norm=1.353259 | learning_rate=0.000012 | epoch=0.443158
+step=680 | epoch=0.450 | loss=0.547458 | grad_norm=1.361982 | learning_rate=0.000012 | epoch=0.449773
+step=690 | epoch=0.456 | loss=0.571755 | grad_norm=1.099898 | learning_rate=0.000012 | epoch=0.456387
+step=700 | epoch=0.463 | loss=0.545746 | grad_norm=1.244540 | learning_rate=0.000012 | epoch=0.463001
+step=710 | epoch=0.470 | loss=0.534331 | grad_norm=1.390290 | learning_rate=0.000011 | epoch=0.469616
+step=720 | epoch=0.476 | loss=0.488876 | grad_norm=1.438677 | learning_rate=0.000011 | epoch=0.476230
+step=730 | epoch=0.483 | loss=0.541171 | grad_norm=1.225177 | learning_rate=0.000011 | epoch=0.482844
+step=740 | epoch=0.489 | loss=0.505600 | grad_norm=1.105565 | learning_rate=0.000011 | epoch=0.489458
+step=750 | epoch=0.496 | loss=0.513685 | grad_norm=1.338943 | learning_rate=0.000010 | epoch=0.496073
+step=750 | epoch=0.496 | eval_loss=0.676528 | eval_runtime=75.076400 | eval_samples_per_second=11.948000 | eval_steps_per_second=1.505000 | epoch=0.496073
+step=750 | epoch=0.496 | eval_coc_delhi_loss=0.641922 | eval_coc_delhi_runtime=23.630200 | eval_coc_delhi_samples_per_second=12.696000 | eval_coc_delhi_steps_per_second=1.608000 | epoch=0.496073
+step=750 | epoch=0.496 | eval_coc_kota_out_loss=0.783593 | eval_coc_kota_out_runtime=27.831800 | eval_coc_kota_out_samples_per_second=10.671000 | eval_coc_kota_out_steps_per_second=1.365000 | epoch=0.496073
+step=750 | epoch=0.496 | eval_mix_open_loss=0.610702 | eval_mix_open_runtime=34.195500 | eval_mix_open_samples_per_second=8.773000 | eval_mix_open_steps_per_second=1.111000 | epoch=0.496073
+step=750 | epoch=0.496 | eval_loss=0.676528 | eval_runtime=75.076400 | eval_samples_per_second=11.948000 | eval_steps_per_second=1.505000 | epoch=0.496073 | eval_coc_delhi_loss=0.641922 | eval_coc_delhi_runtime=23.630200 | eval_coc_delhi_samples_per_second=12.696000 | eval_coc_delhi_steps_per_second=1.608000 | eval_coc_kota_out_loss=0.783593 | eval_coc_kota_out_runtime=27.831800 | eval_coc_kota_out_samples_per_second=10.671000 | eval_coc_kota_out_steps_per_second=1.365000 | eval_mix_open_loss=0.610702 | eval_mix_open_runtime=34.195500 | eval_mix_open_samples_per_second=8.773000 | eval_mix_open_steps_per_second=1.111000
+step=760 | epoch=0.503 | loss=0.493556 | grad_norm=1.293143 | learning_rate=0.000010 | epoch=0.502687
+step=770 | epoch=0.509 | loss=0.455025 | grad_norm=1.539002 | learning_rate=0.000010 | epoch=0.509301
+step=780 | epoch=0.516 | loss=0.561720 | grad_norm=1.651602 | learning_rate=0.000010 | epoch=0.515916
+step=790 | epoch=0.523 | loss=0.475083 | grad_norm=1.169129 | learning_rate=0.000010 | epoch=0.522530
+step=800 | epoch=0.529 | loss=0.533818 | grad_norm=1.425449 | learning_rate=0.000009 | epoch=0.529144
+step=810 | epoch=0.536 | loss=0.483854 | grad_norm=1.282951 | learning_rate=0.000009 | epoch=0.535759
+step=820 | epoch=0.542 | loss=0.529644 | grad_norm=1.273782 | learning_rate=0.000009 | epoch=0.542373
+step=830 | epoch=0.549 | loss=0.547796 | grad_norm=1.200806 | learning_rate=0.000009 | epoch=0.548987
+step=840 | epoch=0.556 | loss=0.534274 | grad_norm=1.160100 | learning_rate=0.000009 | epoch=0.555601
+step=850 | epoch=0.562 | loss=0.535076 | grad_norm=1.289069 | learning_rate=0.000008 | epoch=0.562216
+step=860 | epoch=0.569 | loss=0.554279 | grad_norm=1.580593 | learning_rate=0.000008 | epoch=0.568830
+step=870 | epoch=0.575 | loss=0.565311 | grad_norm=1.564915 | learning_rate=0.000008 | epoch=0.575444
+step=880 | epoch=0.582 | loss=0.541545 | grad_norm=1.291836 | learning_rate=0.000008 | epoch=0.582059
+step=890 | epoch=0.589 | loss=0.488009 | grad_norm=1.101105 | learning_rate=0.000008 | epoch=0.588673
+step=900 | epoch=0.595 | loss=0.539311 | grad_norm=1.255330 | learning_rate=0.000007 | epoch=0.595287
+step=900 | epoch=0.595 | eval_loss=0.671301 | eval_runtime=65.257900 | eval_samples_per_second=13.745000 | eval_steps_per_second=1.732000 | epoch=0.595287
+step=900 | epoch=0.595 | eval_coc_delhi_loss=0.640892 | eval_coc_delhi_runtime=20.841600 | eval_coc_delhi_samples_per_second=14.394000 | eval_coc_delhi_steps_per_second=1.823000 | epoch=0.595287
+step=900 | epoch=0.595 | eval_coc_kota_out_loss=0.772869 | eval_coc_kota_out_runtime=26.289100 | eval_coc_kota_out_samples_per_second=11.297000 | eval_coc_kota_out_steps_per_second=1.445000 | epoch=0.595287
+step=900 | epoch=0.595 | eval_mix_open_loss=0.607154 | eval_mix_open_runtime=34.940200 | eval_mix_open_samples_per_second=8.586000 | eval_mix_open_steps_per_second=1.088000 | epoch=0.595287
+step=900 | epoch=0.595 | eval_loss=0.671301 | eval_runtime=65.257900 | eval_samples_per_second=13.745000 | eval_steps_per_second=1.732000 | epoch=0.595287 | eval_coc_delhi_loss=0.640892 | eval_coc_delhi_runtime=20.841600 | eval_coc_delhi_samples_per_second=14.394000 | eval_coc_delhi_steps_per_second=1.823000 | eval_coc_kota_out_loss=0.772869 | eval_coc_kota_out_runtime=26.289100 | eval_coc_kota_out_samples_per_second=11.297000 | eval_coc_kota_out_steps_per_second=1.445000 | eval_mix_open_loss=0.607154 | eval_mix_open_runtime=34.940200 | eval_mix_open_samples_per_second=8.586000 | eval_mix_open_steps_per_second=1.088000
+step=910 | epoch=0.602 | loss=0.563047 | grad_norm=1.374776 | learning_rate=0.000007 | epoch=0.601902
+step=920 | epoch=0.609 | loss=0.488339 | grad_norm=1.268224 | learning_rate=0.000007 | epoch=0.608516
+step=930 | epoch=0.615 | loss=0.480034 | grad_norm=1.505240 | learning_rate=0.000007 | epoch=0.615130
+step=940 | epoch=0.622 | loss=0.515412 | grad_norm=1.500063 | learning_rate=0.000007 | epoch=0.621745
+step=950 | epoch=0.628 | loss=0.495678 | grad_norm=1.361916 | learning_rate=0.000006 | epoch=0.628359
+step=960 | epoch=0.635 | loss=0.548254 | grad_norm=1.441105 | learning_rate=0.000006 | epoch=0.634973
+step=970 | epoch=0.642 | loss=0.470818 | grad_norm=1.259448 | learning_rate=0.000006 | epoch=0.641587
+step=980 | epoch=0.648 | loss=0.531446 | grad_norm=1.757375 | learning_rate=0.000006 | epoch=0.648202
+step=990 | epoch=0.655 | loss=0.536190 | grad_norm=1.632649 | learning_rate=0.000006 | epoch=0.654816
+step=1000 | epoch=0.661 | loss=0.537997 | grad_norm=1.627177 | learning_rate=0.000005 | epoch=0.661430
+step=1010 | epoch=0.668 | loss=0.538973 | grad_norm=1.340616 | learning_rate=0.000005 | epoch=0.668045
+step=1020 | epoch=0.675 | loss=0.518570 | grad_norm=1.559325 | learning_rate=0.000005 | epoch=0.674659
+step=1030 | epoch=0.681 | loss=0.527935 | grad_norm=1.148974 | learning_rate=0.000005 | epoch=0.681273
+step=1040 | epoch=0.688 | loss=0.510558 | grad_norm=1.610997 | learning_rate=0.000005 | epoch=0.687888
+step=1050 | epoch=0.695 | loss=0.498616 | grad_norm=1.432359 | learning_rate=0.000004 | epoch=0.694502
+step=1050 | epoch=0.695 | eval_loss=0.667912 | eval_runtime=71.500600 | eval_samples_per_second=12.545000 | eval_steps_per_second=1.580000 | epoch=0.694502
+step=1050 | epoch=0.695 | eval_coc_delhi_loss=0.625881 | eval_coc_delhi_runtime=24.468900 | eval_coc_delhi_samples_per_second=12.260000 | eval_coc_delhi_steps_per_second=1.553000 | epoch=0.694502
+step=1050 | epoch=0.695 | eval_coc_kota_out_loss=0.780435 | eval_coc_kota_out_runtime=25.631000 | eval_coc_kota_out_samples_per_second=11.588000 | eval_coc_kota_out_steps_per_second=1.483000 | epoch=0.694502
+step=1050 | epoch=0.695 | eval_mix_open_loss=0.604249 | eval_mix_open_runtime=29.323800 | eval_mix_open_samples_per_second=10.231000 | eval_mix_open_steps_per_second=1.296000 | epoch=0.694502
+step=1050 | epoch=0.695 | eval_loss=0.667912 | eval_runtime=71.500600 | eval_samples_per_second=12.545000 | eval_steps_per_second=1.580000 | epoch=0.694502 | eval_coc_delhi_loss=0.625881 | eval_coc_delhi_runtime=24.468900 | eval_coc_delhi_samples_per_second=12.260000 | eval_coc_delhi_steps_per_second=1.553000 | eval_coc_kota_out_loss=0.780435 | eval_coc_kota_out_runtime=25.631000 | eval_coc_kota_out_samples_per_second=11.588000 | eval_coc_kota_out_steps_per_second=1.483000 | eval_mix_open_loss=0.604249 | eval_mix_open_runtime=29.323800 | eval_mix_open_samples_per_second=10.231000 | eval_mix_open_steps_per_second=1.296000
+step=1060 | epoch=0.701 | loss=0.522411 | grad_norm=1.152121 | learning_rate=0.000004 | epoch=0.701116
+step=1070 | epoch=0.708 | loss=0.537973 | grad_norm=1.168401 | learning_rate=0.000004 | epoch=0.707730
+step=1080 | epoch=0.714 | loss=0.537051 | grad_norm=1.057083 | learning_rate=0.000004 | epoch=0.714345
+step=1090 | epoch=0.721 | loss=0.533044 | grad_norm=1.387402 | learning_rate=0.000004 | epoch=0.720959
+step=1100 | epoch=0.728 | loss=0.501262 | grad_norm=1.058493 | learning_rate=0.000004 | epoch=0.727573
+step=1110 | epoch=0.734 | loss=0.491519 | grad_norm=1.337686 | learning_rate=0.000003 | epoch=0.734188
+step=1120 | epoch=0.741 | loss=0.569885 | grad_norm=1.378407 | learning_rate=0.000003 | epoch=0.740802
+step=1130 | epoch=0.747 | loss=0.476834 | grad_norm=1.233532 | learning_rate=0.000003 | epoch=0.747416
+step=1140 | epoch=0.754 | loss=0.531344 | grad_norm=1.308627 | learning_rate=0.000003 | epoch=0.754031
+step=1150 | epoch=0.761 | loss=0.519774 | grad_norm=1.327566 | learning_rate=0.000003 | epoch=0.760645
+step=1160 | epoch=0.767 | loss=0.505747 | grad_norm=1.368242 | learning_rate=0.000003 | epoch=0.767259
+step=1170 | epoch=0.774 | loss=0.513928 | grad_norm=1.549329 | learning_rate=0.000003 | epoch=0.773874
+step=1180 | epoch=0.780 | loss=0.558280 | grad_norm=1.596973 | learning_rate=0.000002 | epoch=0.780488
+step=1190 | epoch=0.787 | loss=0.475085 | grad_norm=1.277683 | learning_rate=0.000002 | epoch=0.787102
+step=1200 | epoch=0.794 | loss=0.538018 | grad_norm=1.526956 | learning_rate=0.000002 | epoch=0.793716
+step=1200 | epoch=0.794 | eval_loss=0.666691 | eval_runtime=70.013300 | eval_samples_per_second=12.812000 | eval_steps_per_second=1.614000 | epoch=0.793716
+step=1200 | epoch=0.794 | eval_coc_delhi_loss=0.631672 | eval_coc_delhi_runtime=20.208400 | eval_coc_delhi_samples_per_second=14.845000 | eval_coc_delhi_steps_per_second=1.880000 | epoch=0.793716
+step=1200 | epoch=0.794 | eval_coc_kota_out_loss=0.770531 | eval_coc_kota_out_runtime=24.804900 | eval_coc_kota_out_samples_per_second=11.973000 | eval_coc_kota_out_steps_per_second=1.532000 | epoch=0.793716
+step=1200 | epoch=0.794 | eval_mix_open_loss=0.604653 | eval_mix_open_runtime=29.955600 | eval_mix_open_samples_per_second=10.015000 | eval_mix_open_steps_per_second=1.269000 | epoch=0.793716
+step=1200 | epoch=0.794 | eval_loss=0.666691 | eval_runtime=70.013300 | eval_samples_per_second=12.812000 | eval_steps_per_second=1.614000 | epoch=0.793716 | eval_coc_delhi_loss=0.631672 | eval_coc_delhi_runtime=20.208400 | eval_coc_delhi_samples_per_second=14.845000 | eval_coc_delhi_steps_per_second=1.880000 | eval_coc_kota_out_loss=0.770531 | eval_coc_kota_out_runtime=24.804900 | eval_coc_kota_out_samples_per_second=11.973000 | eval_coc_kota_out_steps_per_second=1.532000 | eval_mix_open_loss=0.604653 | eval_mix_open_runtime=29.955600 | eval_mix_open_samples_per_second=10.015000 | eval_mix_open_steps_per_second=1.269000
+step=1210 | epoch=0.800 | loss=0.547519 | grad_norm=1.522135 | learning_rate=0.000002 | epoch=0.800331
+step=1220 | epoch=0.807 | loss=0.465572 | grad_norm=1.701753 | learning_rate=0.000002 | epoch=0.806945
+step=1230 | epoch=0.814 | loss=0.493924 | grad_norm=1.806808 | learning_rate=0.000002 | epoch=0.813559
+step=1240 | epoch=0.820 | loss=0.469174 | grad_norm=1.384794 | learning_rate=0.000002 | epoch=0.820174
+step=1250 | epoch=0.827 | loss=0.513467 | grad_norm=1.309148 | learning_rate=0.000002 | epoch=0.826788
+step=1260 | epoch=0.833 | loss=0.516035 | grad_norm=1.734976 | learning_rate=0.000001 | epoch=0.833402
+step=1270 | epoch=0.840 | loss=0.541125 | grad_norm=1.623234 | learning_rate=0.000001 | epoch=0.840017
+step=1280 | epoch=0.847 | loss=0.531942 | grad_norm=1.295919 | learning_rate=0.000001 | epoch=0.846631
+step=1290 | epoch=0.853 | loss=0.506692 | grad_norm=1.521065 | learning_rate=0.000001 | epoch=0.853245
+step=1300 | epoch=0.860 | loss=0.537444 | grad_norm=1.335142 | learning_rate=0.000001 | epoch=0.859859
+step=1310 | epoch=0.866 | loss=0.581440 | grad_norm=1.394724 | learning_rate=0.000001 | epoch=0.866474
+step=1320 | epoch=0.873 | loss=0.532594 | grad_norm=1.310755 | learning_rate=0.000001 | epoch=0.873088
+step=1330 | epoch=0.880 | loss=0.506045 | grad_norm=1.815532 | learning_rate=0.000001 | epoch=0.879702
+step=1340 | epoch=0.886 | loss=0.548325 | grad_norm=1.426985 | learning_rate=0.000001 | epoch=0.886317
+step=1350 | epoch=0.893 | loss=0.503992 | grad_norm=1.233876 | learning_rate=0.000001 | epoch=0.892931
+step=1350 | epoch=0.893 | eval_loss=0.665759 | eval_runtime=66.166600 | eval_samples_per_second=13.557000 | eval_steps_per_second=1.708000 | epoch=0.892931
+step=1350 | epoch=0.893 | eval_coc_delhi_loss=0.631590 | eval_coc_delhi_runtime=20.383200 | eval_coc_delhi_samples_per_second=14.718000 | eval_coc_delhi_steps_per_second=1.864000 | epoch=0.892931
+step=1350 | epoch=0.893 | eval_coc_kota_out_loss=0.768987 | eval_coc_kota_out_runtime=30.857100 | eval_coc_kota_out_samples_per_second=9.625000 | eval_coc_kota_out_steps_per_second=1.231000 | epoch=0.892931
+step=1350 | epoch=0.893 | eval_mix_open_loss=0.603411 | eval_mix_open_runtime=28.470700 | eval_mix_open_samples_per_second=10.537000 | eval_mix_open_steps_per_second=1.335000 | epoch=0.892931
+step=1350 | epoch=0.893 | eval_loss=0.665759 | eval_runtime=66.166600 | eval_samples_per_second=13.557000 | eval_steps_per_second=1.708000 | epoch=0.892931 | eval_coc_delhi_loss=0.631590 | eval_coc_delhi_runtime=20.383200 | eval_coc_delhi_samples_per_second=14.718000 | eval_coc_delhi_steps_per_second=1.864000 | eval_coc_kota_out_loss=0.768987 | eval_coc_kota_out_runtime=30.857100 | eval_coc_kota_out_samples_per_second=9.625000 | eval_coc_kota_out_steps_per_second=1.231000 | eval_mix_open_loss=0.603411 | eval_mix_open_runtime=28.470700 | eval_mix_open_samples_per_second=10.537000 | eval_mix_open_steps_per_second=1.335000
+step=1360 | epoch=0.900 | loss=0.546452 | grad_norm=1.651554 | learning_rate=0.000001 | epoch=0.899545
+step=1370 | epoch=0.906 | loss=0.538077 | grad_norm=1.293951 | learning_rate=0.000000 | epoch=0.906160
+step=1380 | epoch=0.913 | loss=0.535255 | grad_norm=1.557483 | learning_rate=0.000000 | epoch=0.912774
+step=1390 | epoch=0.919 | loss=0.520457 | grad_norm=1.372874 | learning_rate=0.000000 | epoch=0.919388
+step=1400 | epoch=0.926 | loss=0.504770 | grad_norm=1.403715 | learning_rate=0.000000 | epoch=0.926002
+step=1410 | epoch=0.933 | loss=0.485536 | grad_norm=1.196296 | learning_rate=0.000000 | epoch=0.932617
+step=1420 | epoch=0.939 | loss=0.481798 | grad_norm=1.212415 | learning_rate=0.000000 | epoch=0.939231
+step=1430 | epoch=0.946 | loss=0.511386 | grad_norm=1.398043 | learning_rate=0.000000 | epoch=0.945845
+step=1440 | epoch=0.952 | loss=0.543134 | grad_norm=1.405070 | learning_rate=0.000000 | epoch=0.952460
+step=1450 | epoch=0.959 | loss=0.505246 | grad_norm=1.176748 | learning_rate=0.000000 | epoch=0.959074
+step=1460 | epoch=0.966 | loss=0.499062 | grad_norm=1.186100 | learning_rate=0.000000 | epoch=0.965688
+step=1470 | epoch=0.972 | loss=0.522678 | grad_norm=1.334427 | learning_rate=0.000000 | epoch=0.972303
+step=1480 | epoch=0.979 | loss=0.442545 | grad_norm=1.118141 | learning_rate=0.000000 | epoch=0.978917
+step=1490 | epoch=0.986 | loss=0.521595 | grad_norm=1.241123 | learning_rate=0.000000 | epoch=0.985531
+step=1500 | epoch=0.992 | loss=0.547295 | grad_norm=1.441835 | learning_rate=0.000000 | epoch=0.992146
+step=1500 | epoch=0.992 | eval_loss=0.665368 | eval_runtime=85.975800 | eval_samples_per_second=10.433000 | eval_steps_per_second=1.314000 | epoch=0.992146
+step=1500 | epoch=0.992 | eval_coc_delhi_loss=0.631597 | eval_coc_delhi_runtime=20.541400 | eval_coc_delhi_samples_per_second=14.605000 | eval_coc_delhi_steps_per_second=1.850000 | epoch=0.992146
+step=1500 | epoch=0.992 | eval_coc_kota_out_loss=0.768503 | eval_coc_kota_out_runtime=28.591700 | eval_coc_kota_out_samples_per_second=10.388000 | eval_coc_kota_out_steps_per_second=1.329000 | epoch=0.992146
+step=1500 | epoch=0.992 | eval_mix_open_loss=0.603115 | eval_mix_open_runtime=29.699600 | eval_mix_open_samples_per_second=10.101000 | eval_mix_open_steps_per_second=1.279000 | epoch=0.992146
+step=1500 | epoch=0.992 | eval_loss=0.665368 | eval_runtime=85.975800 | eval_samples_per_second=10.433000 | eval_steps_per_second=1.314000 | epoch=0.992146 | eval_coc_delhi_loss=0.631597 | eval_coc_delhi_runtime=20.541400 | eval_coc_delhi_samples_per_second=14.605000 | eval_coc_delhi_steps_per_second=1.850000 | eval_coc_kota_out_loss=0.768503 | eval_coc_kota_out_runtime=28.591700 | eval_coc_kota_out_samples_per_second=10.388000 | eval_coc_kota_out_steps_per_second=1.329000 | eval_mix_open_loss=0.603115 | eval_mix_open_runtime=29.699600 | eval_mix_open_samples_per_second=10.101000 | eval_mix_open_steps_per_second=1.279000
+step=1510 | epoch=0.999 | loss=0.512002 | grad_norm=1.516001 | learning_rate=0.000000 | epoch=0.998760
+step=1512 | epoch=1.000 | eval_loss=0.665494 | eval_runtime=70.043800 | eval_samples_per_second=12.806000 | eval_steps_per_second=1.613000 | epoch=1.000000
+step=1512 | epoch=1.000 | eval_coc_delhi_loss=0.631194 | eval_coc_delhi_runtime=21.262100 | eval_coc_delhi_samples_per_second=14.110000 | eval_coc_delhi_steps_per_second=1.787000 | epoch=1.000000
+step=1512 | epoch=1.000 | eval_coc_kota_out_loss=0.769428 | eval_coc_kota_out_runtime=22.918500 | eval_coc_kota_out_samples_per_second=12.959000 | eval_coc_kota_out_steps_per_second=1.658000 | epoch=1.000000
+step=1512 | epoch=1.000 | eval_mix_open_loss=0.603100 | eval_mix_open_runtime=29.250300 | eval_mix_open_samples_per_second=10.256000 | eval_mix_open_steps_per_second=1.299000 | epoch=1.000000
+step=1512 | epoch=1.000 | eval_loss=0.665494 | eval_runtime=70.043800 | eval_samples_per_second=12.806000 | eval_steps_per_second=1.613000 | epoch=1.000000 | eval_coc_delhi_loss=0.631194 | eval_coc_delhi_runtime=21.262100 | eval_coc_delhi_samples_per_second=14.110000 | eval_coc_delhi_steps_per_second=1.787000 | eval_coc_kota_out_loss=0.769428 | eval_coc_kota_out_runtime=22.918500 | eval_coc_kota_out_samples_per_second=12.959000 | eval_coc_kota_out_steps_per_second=1.658000 | eval_mix_open_loss=0.603100 | eval_mix_open_runtime=29.250300 | eval_mix_open_samples_per_second=10.256000 | eval_mix_open_steps_per_second=1.299000
+step=1512 | epoch=1.000 | train_runtime=10822.400000 | train_samples_per_second=2.235000 | train_steps_per_second=0.140000 | total_flos=365633183256625152.000000 | train_loss=0.524914 | epoch=1.000000

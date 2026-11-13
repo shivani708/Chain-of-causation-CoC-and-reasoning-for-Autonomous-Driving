@@ -1,0 +1,79 @@
+COMMANDS - FINAL CoC MODEL (merged_sbfix_ck1500, LingoQA 73.2)
+================================================================
+All local commands are run from this package folder (CoC_final_73p2/).
+
+A. INSTALL (vehicle PC / laptop, once)
+--------------------------------------
+  python3 -m venv ~/coc_live && source ~/coc_live/bin/activate
+  # NVIDIA GPU (recommended for real time):
+  pip install torch torchvision                     # CUDA build matching the driver
+  # CPU only (slow, several seconds per answer):
+  #   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+  pip install -r deployment/requirements_live.txt   # transformers >= 5.0 is required for Qwen3-VL
+
+  Check the model loads:
+  python3 -c "from transformers import AutoModelForImageTextToText as M; M.from_pretrained('model/merged_sbfix_ck1500'); print('ok')"
+
+B. REAL-TIME CoC (one CoC line on the video)  - deployment/live_coc_single.py
+-----------------------------------------------------------------------------
+  python3 deployment/live_coc_single.py                              # webcam 0
+  python3 deployment/live_coc_single.py --source 1                   # second camera
+  python3 deployment/live_coc_single.py --source rtsp://<camera-ip>/stream
+  python3 deployment/live_coc_single.py --source drive.mp4           # recorded video at real speed
+  python3 deployment/live_coc_single.py --source drive.mp4 --no_display --out_video drive_coc.mp4
+  Options:
+    --setup vehicle   (default) 4 frames 0.1 s apart, history 256x144, current 512x288
+    --setup train     4 frames 0.25 s apart, full frames (training setup)
+    --ask_every N     minimum seconds between answers (0 = as fast as the GPU allows)
+    --device cpu|cuda, --dtype bf16|fp32, --log answers.csv
+  Keys: p = pause, q / ESC = quit.  Every answer -> live_coc_answers.csv (short CoC + full answer).
+
+C. REAL-TIME QUESTION ANSWERING (LingoQA style) - deployment/live_camera_vqa.py
+-------------------------------------------------------------------------------
+  python3 deployment/live_camera_vqa.py --source 0
+  python3 deployment/live_camera_vqa.py --question "Is it safe to overtake now?" --ask_every 10
+  Keys: SPACE ask now, n next preset question, p pause, q quit; or type a question in the terminal.
+
+D. OFFLINE: redraw a video with one CoC line from an answers CSV
+----------------------------------------------------------------
+  python3 deployment/make_single_overlay.py <video.mp4> <answers.csv> <out.mp4> [--config B_vehicle]
+
+E. ON THE SERVER (Slurm) - evaluation
+-------------------------------------
+  cd /data/common_datasets/ai24mtech02003/24_dataset_coc
+  # video test (3 setups, answers CSV + overlay video):
+  python scripts/test_coc_video.py --model models/merged_sbfix_ck1500 --videos <a.mp4> <b.mp4> --out eval/<dir>
+  # LingoQA score of every checkpoint of a LoRA run (merge -> predict -> Lingo-Judge):
+  sbatch -p b6000 eval/eval_lora_ckpts.sbatch lora_sbfix_v1 $PWD/models/merged_rft_ck500
+  # LingoQA repeat runs (determinism check):
+  sbatch eval/repeat_lingoqa.sbatch $PWD/models/merged_sbfix_ck1500 1 10     # <MODEL> <FIRST_RUN> <LAST_RUN>
+  # WaymoQA + spatial benchmarks:
+  sbatch eval/run_benchmarks.sbatch sbfix_ck1500 $PWD/models/merged_sbfix_ck1500 lingo   # <TAG> <MODEL_DIR> [lingo|nolingo]
+
+F. ON THE SERVER - rebuild the final model from scratch
+-------------------------------------------------------
+  1) speed-bump check of CoC labels with Qwen3.5-27B (vLLM, ~3 h on one RTX Pro 6000):
+       sbatch scripts/verify_sb.sbatch          -> data/clean_sb/verdicts.jsonl, VERIFY_SUMMARY.txt
+  2) build cleaned data + train the LoRA on the 72.2 model (~3 h):
+       sbatch scripts/train_lora_sbfix.sbatch   (runs build_sbfix.py first)
+  3) score checkpoints on LingoQA, pick the best (step 1500 = 73.2):
+       sbatch -p b6000 eval/eval_lora_ckpts.sbatch lora_sbfix_v1 $PWD/models/merged_rft_ck500
+  4) merge the chosen adapter into a plain model:
+       python scripts/merge_lora.py models/merged_rft_ck500 models/lora_sbfix_v1/checkpoint-1500 models/merged_sbfix_ck1500
+
+  The 72.2 base (merged_rft_ck500) itself came from:
+       sbatch scripts/rft_data.sbatch           (68.6 model samples 8 answers x 10k LingoQA-train prompts, judged)
+       sbatch scripts/train_lora_rft.sbatch     (LoRA on the 68.6 model)
+       python scripts/merge_lora.py <68.6 model> models/lora_rft_v1/checkpoint-500 models/merged_rft_ck500
+
+G. USING THE MODEL IN YOUR OWN CODE (minimal)
+---------------------------------------------
+  from transformers import AutoModelForImageTextToText, AutoProcessor
+  m = AutoModelForImageTextToText.from_pretrained("model/merged_sbfix_ck1500", dtype="bfloat16").to("cuda").eval()
+  p = AutoProcessor.from_pretrained("model/merged_sbfix_ck1500")
+  content = [{"type": "image", "image": img} for img in four_pil_frames] + [{"type": "text", "text": COC_PROMPT}]
+  x = p.apply_chat_template([{"role": "user", "content": content}], tokenize=True, add_generation_prompt=True,
+                            return_dict=True, return_tensors="pt").to("cuda")
+  y = m.generate(**x, max_new_tokens=96, do_sample=False)     # do_sample=False is required (greedy)
+  print(p.batch_decode(y[:, x["input_ids"].shape[1]:], skip_special_tokens=True)[0])
+  COC_PROMPT is the exact text in deployment/live_coc_single.py (PROMPT) - do not change it.

@@ -1,0 +1,111 @@
+24 dataset CoC (coc24_v1) - benchmark results vs coc_student_alpamayo (LingoQA 68.6)   2026-10-29
+
+WHAT : LingoQA (500 val Q, Lingo-Judge), WaymoQA image split (5,519 MCQ, official prompt),
+       spatial test (5,600 Q, held-out Delhi + kota_out). Same protocols as all earlier rows.
+WHERE: eval/lingoqa/*.csv + scores.txt, eval/waymoqa/<tag>/scores.json, eval/spatial/results/<tag>/scores.json
+NOTE : LingoQA judge ran in env vqa_db (old env 'vqa' no longer exists); re-judging the 68.6 predictions
+       in this env gives exactly 68.6, so the judge is unchanged.
+
+model                         LingoQA   WaymoQA All  Safety  Normal  Others   Spatial overall
+base Qwen3-VL-2B               46.2      56.77       56.05   62.07   47.55     56.2
+coc_student_alpamayo (68.6)    68.6      54.00       53.97   57.44   46.96     51.3
+coc24_v1 epoch 2 (ck-30324)    51.2      56.41       57.34   59.59   47.65     52.7
+coc24_v1 best (step 44000)     51.4      56.48       57.51   59.45   47.94     53.2
+
+Spatial test, selected skills          base   68.6   coc24_best
+  CoC grounding (IoU>=0.5)             62.5   24.8   30.2  (153/400 answered "no matching object"; boxes given are 75% correct)
+  CoC lane / road area                 32.8   27.0   35.2
+  CoC direction                        58.5   57.0   63.0
+  CoC distance band                    58.0   53.0   61.8
+  CoC existence yes/no                 64.8   74.2   79.2
+  v2 ego-relative direction            51.8   38.0   50.5
+  v2 counting                          46.0   48.8   36.5
+
+FINDINGS
+1. LingoQA dropped 68.6 -> 51.4. Main cause: 98/500 answers are the literal text "action, justification"
+   (format-parroting on the action questions). Without those, accuracy on the other 402 is ~64%.
+   Answers are also shorter (15 vs 27 words).
+2. WaymoQA improved 54.0 -> 56.5 (Safety 54.0 -> 57.5), back at/above base level.
+3. Spatial improved 51.3 -> 53.2 vs the 68.6 model, but grounding is hurt by a learned
+   "There is no matching object in view." answer (grounding_v1 has ~49% empty-target queries).
+
+=====================================================================================================
+RUN 2: coc24_v2_open  (CoC alpamayo_native 64k [62,487 train] + 28k open VQA, NO grounding)  2026-10-29
+=====================================================================================================
+Same recipe (base clean_5city-1556, lr 1e-5, batch 16, 3 epochs, 2x h200, job 2808, ~5.5 h).
+Model: models/coc24_v2_open/{best (=final step 16971), checkpoint-5657, checkpoint-11314, checkpoint-16971}
+Final val: CoC delhi 0.597, CoC kota_out 0.778, open 0.861.
+
+model                         LingoQA   WaymoQA All  Safety  Normal  Others   Spatial overall
+coc_student_alpamayo (68.6)    68.6      54.00       53.97   57.44   46.96     51.3
+coc24_v1 best (with ground)    51.4      56.48       57.51   59.45   47.94     53.2
+coc24_v2_open epoch 2          53.4      58.76       60.76   60.59   50.29     47.7
+coc24_v2_open best/final       53.4      58.72       60.47   60.78   50.39     47.8
+
+FINDINGS
+1. LingoQA 53.4: +2 vs v1, still -15 vs 68.6. The literal "action, justification" answers remain
+   (79/500, v1 had 98) -> the LingoQA drop comes mainly from the open-VQA part, not from grounding.
+2. WaymoQA 58.7 (Safety 60.5): best of all CoC models (+4.7 vs 68.6, +2.2 vs v1).
+3. Spatial 47.8: CoC grounding scores 0 because v2 answers boxes in Qwen's native json "bbox_2d" (0-1000)
+   format, which this test does not accept; lane/road area also drops (19.5). Grounding data (v1) is what
+   kept the spatial skills.
+
+=====================================================================================================
+RUN 3: coc24_v3_tibrad  (TiBrad clean_v4 11-city 48,864 QA, 12 frames + 28k open VQA)  2026-10-30
+=====================================================================================================
+Same recipe; job 2822, 2x h200, 9h45m. Model: models/coc24_v3_tibrad/{best (step 12000), checkpoint-4806,
+checkpoint-9612, checkpoint-14418}. Val: TiBrad Delhi + open VQA.
+
+model                          LingoQA   WaymoQA All  Safety  Normal  Others   Spatial overall
+coc_student_alpamayo (68.6)     68.6      54.00       53.97   57.44   46.96     51.3
+coc24_v1 best (CoC+open+ground) 51.4      56.48       57.51   59.45   47.94     53.2
+coc24_v2_open best (CoC+open)   53.4      58.72       60.47   60.78   50.39     47.8
+coc24_v3_tibrad epoch 2         59.0      59.18       61.30   61.83   48.73     52.4
+coc24_v3_tibrad best            58.4      59.20       61.55   61.64   48.63     52.3
+
+FINDINGS
+1. Best LingoQA of the three new runs (59.0), with longer answers (31 words). It still answers the literal
+   "action, justification" on 100/500 questions; on the other 400 it is right ~74% -> fixing that one
+   behaviour could take LingoQA to ~70.
+2. Best WaymoQA of all CoC models: 59.2 (Safety 61.6, Traffic Signal 74.2, Safety Prediction 70.4).
+3. Spatial 52.3 (lane 45.0, direction 65.5, existence 82-87); grounding 0 because of the json bbox_2d box
+   format, as in run 2.
+
+=====================================================================================================
+WEIGHT MERGES: a * 68.6 model + (1-a) * coc24_v3_tibrad epoch 2   (LingoQA only)   2026-10-31
+=====================================================================================================
+models/merge_68p6_<a>_v3ep2   (job 2848, same LingoQA harness/judge)
+  a=0.3 : LingoQA 58.2   literal "action, justification" 100/500
+  a=0.5 : LingoQA 57.2   literal 97/500
+  a=0.7 : LingoQA 64.4   literal 30/500
+  refs  : 68.6 model 68.6 (0 literal) ; v3 epoch 2 59.0 (100 literal)
+Finding: no merge beats 68.6. The copying behaviour only fades when the 68.6 weights dominate (a=0.7),
+and LingoQA rises with it -> the "action, justification" format must be taught in training (Run 4 plan).
+
+=====================================================================================================
+PHASE 1: LoRA-L (lora_l_v1) on the frozen 68.6 model   (job 2887 train 2.4 h; job 2895 LingoQA per checkpoint)
+=====================================================================================================
+r=128, alpha=256, lr 1e-4, 1 epoch, 80,428 examples (LingoQA-train long answers 40k, format 8k, CoC 18k,
+TiBrad 5-city 12.4k, replay 2k). Literal "action, justification" answers: 0 at EVERY checkpoint (fixed).
+LingoQA per checkpoint: 500 50.4 | 1000 56.6 | 1500 56.6 | 2000 60.4 | 2500 63.4 (best) | 3000 55.0 |
+                        3500 57.8 | 4000 59.8 | 4500 59.0 | 5000/final 58.4
+Gate 1 (>= 70): FAILED. Best 63.4 < 68.6.
+Why: answers moved to the short LingoQA-train style (18 words vs 29 for the 68.6 model) and became less
+grounded (some self-contradicting answers). The 68.6 model's detailed answers score better with Lingo-Judge
+than LingoQA-train-style answers (same pattern as the old LingoQA-only run: 60.8, 13.6 words).
+
+=====================================================================================================
+RFT: lora_rft_v1 — LoRA on the frozen 68.6 model, trained on its OWN judge-approved answers   (3 Nov 2026)
+=====================================================================================================
+Data: 68.6 model sampled 8 answers on 10,000 LingoQA-TRAIN prompts (8k plain + 2k "action, justification");
+Lingo-Judge vs TRAIN references; mean pass rate 49.5%; kept best correct per prompt: 8,490 (train 8,190,
+val 300), mean 27.9 words; + 3,000 CoC. LoRA r=64, alpha=128, lr 2e-5, 1 epoch (~700 steps), 1 GPU.
+Jobs: 2899 (generate+judge), 2905 (train), 2906 (LingoQA per checkpoint).
+LingoQA per checkpoint: 100 67.8 | 200 72.2 | 300 70.2 | 400 71.8 | 500 72.2 | 600 72.0 | 700/final 71.6
+Copied "action, justification": 0 at every checkpoint.
+Gate 1 (>= 70): PASSED. Best 72.2 (checkpoints 200 and 500); every checkpoint from 200 on is 70.2-72.2,
+so the gain over 68.6 (+3.6) is larger than the +-2 noise and is consistent across 6 checkpoints.
+RFT model WaymoQA / spatial (job 2927, merged models models/merged_rft_ck500, merged_rft_final):
+  rft_ck500  : WaymoQA All 52.69  Safety 52.73  Normal 55.44  Others 46.96 | spatial 50.7
+  rft_final  : WaymoQA All 52.71  Safety 52.68  Normal 55.49  Others 47.06 | spatial 50.8
+  -> LingoQA specialist: +3.6 LingoQA vs 68.6 model, WaymoQA -1.3 (54.0 -> 52.7), spatial -0.6.

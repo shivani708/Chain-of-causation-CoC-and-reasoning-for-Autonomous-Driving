@@ -1,0 +1,9 @@
+# CPU (Ryzen 7950X) install:
+#   python3 -m venv ~/vqa_live && source ~/vqa_live/bin/activate
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements_live.txt
+# (NVIDIA GPU: install the CUDA build of torch instead of the CPU one.)
+transformers>=5.0
+accelerate
+opencv-python
+pillow

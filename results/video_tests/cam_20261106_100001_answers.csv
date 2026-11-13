@@ -1,0 +1,622 @@
+clip,time_s,frame,config,answer,decision_class,words,prompt_tokens,latency_s
+cam_20261106_100001,2.0,40,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.55
+cam_20261106_100001,2.0,40,B_vehicle,Slow down due to the red traffic light ahead,stop/slow,9,619,0.36
+cam_20261106_100001,2.0,40,C_train169,"Stop due to red traffic light A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,36,1195,1.41
+cam_20261106_100001,4.0,80,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.53
+cam_20261106_100001,4.0,80,B_vehicle,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,619,0.87
+cam_20261106_100001,4.0,80,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.15
+cam_20261106_100001,6.0,120,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.48
+cam_20261106_100001,6.0,120,B_vehicle,"Stop due to red traffic light A mandatory speed limit sign is observed on the right, indicating follow speed limits. A mandatory speed limit sign is observed on the right, indicating follow speed limits.",stop/slow,34,619,0.87
+cam_20261106_100001,6.0,120,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.14
+cam_20261106_100001,8.0,160,A_train,Stop because of red traffic light ahead,stop/slow,7,1231,0.35
+cam_20261106_100001,8.0,160,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,8.0,160,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the right, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the right, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.14
+cam_20261106_100001,10.0,200,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,10.0,200,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,10.0,200,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.14
+cam_20261106_100001,12.0,240,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.15
+cam_20261106_100001,12.0,240,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,12.0,240,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,14.0,280,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,14.0,280,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,14.0,280,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.38
+cam_20261106_100001,16.0,320,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,16.0,320,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,16.0,320,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.14
+cam_20261106_100001,18.0,360,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,18.0,360,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,18.0,360,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,20.0,400,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,20.0,400,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,20.0,400,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,22.0,440,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,22.0,440,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,22.0,440,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,24.0,480,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,24.0,480,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,24.0,480,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,26.0,520,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,26.0,520,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.28
+cam_20261106_100001,26.0,520,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,28.0,560,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,28.0,560,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,28.0,560,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,30.0,600,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,30.0,600,B_vehicle,Slow down due to the red traffic light ahead,stop/slow,9,619,0.28
+cam_20261106_100001,30.0,600,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.33
+cam_20261106_100001,32.0,640,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,32.0,640,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,32.0,640,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,34.0,680,A_train,Stop due to red traffic light,stop/slow,6,1231,0.38
+cam_20261106_100001,34.0,680,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,34.0,680,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,36.0,720,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,36.0,720,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,36.0,720,C_train169,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,1195,1.29
+cam_20261106_100001,38.0,760,A_train,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,1231,1.21
+cam_20261106_100001,38.0,760,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,38.0,760,C_train169,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,1195,0.97
+cam_20261106_100001,40.0,800,A_train,"Stop due to red traffic light A mandatory speed limit sign is observed directly ahead, indicating follow speed limits. A mandatory speed limit sign is observed directly ahead, indicating follow speed limits.",stop/slow,32,1231,0.95
+cam_20261106_100001,40.0,800,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,40.0,800,C_train169,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,1195,0.98
+cam_20261106_100001,42.0,840,A_train,"Slow down due to the red traffic light ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1231,1.05
+cam_20261106_100001,42.0,840,B_vehicle,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,619,0.91
+cam_20261106_100001,42.0,840,C_train169,"Stop because of red traffic light A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,34,1195,0.98
+cam_20261106_100001,44.0,880,A_train,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.36
+cam_20261106_100001,44.0,880,B_vehicle,Accelerate because of green traffic light,speed up,6,619,0.3
+cam_20261106_100001,44.0,880,C_train169,Accelerate because of green traffic light,speed up,6,1195,0.42
+cam_20261106_100001,46.0,920,A_train,"Slow down due to the red traffic light ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1231,1.15
+cam_20261106_100001,46.0,920,B_vehicle,Accelerate because of green traffic light,speed up,6,619,0.23
+cam_20261106_100001,46.0,920,C_train169,"Stop due to red traffic light A mandatory speed limit sign is observed on the left, indicating 30 kmph. A mandatory speed limit sign is observed on the left, indicating 30 kmph.",stop/slow,32,1195,1.06
+cam_20261106_100001,48.0,960,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,48.0,960,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,48.0,960,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,50.0,1000,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,50.0,1000,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,50.0,1000,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,52.0,1040,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,52.0,1040,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,52.0,1040,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,54.0,1080,A_train,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1231,1.13
+cam_20261106_100001,54.0,1080,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.26
+cam_20261106_100001,54.0,1080,C_train169,"Slow down due to the sharp left turn ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1195,1.05
+cam_20261106_100001,56.0,1120,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.38
+cam_20261106_100001,56.0,1120,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,56.0,1120,C_train169,Keep lane because the road ahead is clear.,keep,8,1195,0.39
+cam_20261106_100001,58.0,1160,A_train,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1231,1.5
+cam_20261106_100001,58.0,1160,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,58.0,1160,C_train169,Keep lane because the lane ahead is clear.,keep,8,1195,0.47
+cam_20261106_100001,60.0,1200,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,60.0,1200,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.26
+cam_20261106_100001,60.0,1200,C_train169,"Slow down due to the sharp left turn ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1195,1.05
+cam_20261106_100001,62.0,1240,A_train,"Slow down due to the sharp left curve ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1231,1.67
+cam_20261106_100001,62.0,1240,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.33
+cam_20261106_100001,62.0,1240,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.43
+cam_20261106_100001,64.0,1280,A_train,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1231,1.68
+cam_20261106_100001,64.0,1280,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,64.0,1280,C_train169,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.31
+cam_20261106_100001,66.0,1320,A_train,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1231,1.13
+cam_20261106_100001,66.0,1320,B_vehicle,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,619,1.02
+cam_20261106_100001,66.0,1320,C_train169,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.17
+cam_20261106_100001,68.0,1360,A_train,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,41,1231,1.26
+cam_20261106_100001,68.0,1360,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.26
+cam_20261106_100001,68.0,1360,C_train169,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1195,1.25
+cam_20261106_100001,70.0,1400,A_train,Slow down due to the sharp left turn ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,70.0,1400,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,70.0,1400,C_train169,Slow down due to the sharp left turn ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,72.0,1440,A_train,Slow down due to the sharp left curve ahead,stop/slow,9,1231,0.47
+cam_20261106_100001,72.0,1440,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,72.0,1440,C_train169,"Slow down due to the sharp left curve ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1195,1.67
+cam_20261106_100001,74.0,1480,A_train,"Slow down due to the sharp left curve ahead A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,41,1231,1.25
+cam_20261106_100001,74.0,1480,B_vehicle,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,619,1.02
+cam_20261106_100001,74.0,1480,C_train169,"Slow down due to a sharp left turn ahead A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,41,1195,1.25
+cam_20261106_100001,76.0,1520,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,76.0,1520,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,76.0,1520,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,78.0,1560,A_train,Slow down due to a sharp left turn,stop/slow,8,1231,0.37
+cam_20261106_100001,78.0,1560,B_vehicle,Slow down due to a sharp left turn,stop/slow,8,619,0.25
+cam_20261106_100001,78.0,1560,C_train169,Slow down due to a sharp left turn,stop/slow,8,1195,0.36
+cam_20261106_100001,80.0,1600,A_train,Slow down due to a sharp right turn ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,80.0,1600,B_vehicle,Slow down due to the sharp right turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,80.0,1600,C_train169,Slow down due to a sharp right turn ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,82.0,1640,A_train,Slow down due to a sharp right turn ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,82.0,1640,B_vehicle,Slow down due to a sharp right turn ahead,stop/slow,9,619,0.27
+cam_20261106_100001,82.0,1640,C_train169,Slow down due to the sharp right turn ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,84.0,1680,A_train,Slow down due to a speed bump ahead,stop/slow,8,1231,0.38
+cam_20261106_100001,84.0,1680,B_vehicle,Slow down due to the sharp right turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,84.0,1680,C_train169,Slow down due to a sharp right turn ahead,stop/slow,9,1195,0.39
+cam_20261106_100001,86.0,1720,A_train,Slow down due to a sharp left turn,stop/slow,8,1231,0.44
+cam_20261106_100001,86.0,1720,B_vehicle,Slow down due to a sharp left turn,stop/slow,8,619,0.33
+cam_20261106_100001,86.0,1720,C_train169,Slow down due to a sharp left turn,stop/slow,8,1195,0.44
+cam_20261106_100001,88.0,1760,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,88.0,1760,B_vehicle,Slow down due to pedestrians crossing the road,stop/slow,8,619,0.34
+cam_20261106_100001,88.0,1760,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,90.0,1800,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,90.0,1800,B_vehicle,Slow down due to pedestrians crossing the road,stop/slow,8,619,0.33
+cam_20261106_100001,90.0,1800,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,92.0,1840,A_train,Stop due to red traffic light,stop/slow,6,1231,0.41
+cam_20261106_100001,92.0,1840,B_vehicle,Slow down due to a pedestrian standing near the lane ahead,stop/slow,11,619,0.43
+cam_20261106_100001,92.0,1840,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,94.0,1880,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,94.0,1880,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,94.0,1880,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,96.0,1920,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,96.0,1920,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.28
+cam_20261106_100001,96.0,1920,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,98.0,1960,A_train,Stop because of red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,98.0,1960,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,98.0,1960,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,100.0,2000,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,100.0,2000,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,100.0,2000,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,102.0,2040,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.54
+cam_20261106_100001,102.0,2040,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,102.0,2040,C_train169,"Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.",stop/slow,44,1195,1.45
+cam_20261106_100001,104.0,2080,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.15
+cam_20261106_100001,104.0,2080,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,104.0,2080,C_train169,"Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.",stop/slow,44,1195,1.27
+cam_20261106_100001,106.0,2120,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,106.0,2120,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,106.0,2120,C_train169,"Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.",stop/slow,44,1195,1.25
+cam_20261106_100001,108.0,2160,A_train,"Stop due to red traffic light A mandatory stop line is observed on the right, indicating a no-go zone; stop before the line. A mandatory stop line is observed on the right, indicating a no-go zone; stop before the line.",stop/slow,40,1231,1.57
+cam_20261106_100001,108.0,2160,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.28
+cam_20261106_100001,108.0,2160,C_train169,"Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.",stop/slow,44,1195,1.61
+cam_20261106_100001,110.0,2200,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,110.0,2200,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,110.0,2200,C_train169,"Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.",stop/slow,44,1195,1.7
+cam_20261106_100001,112.0,2240,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,112.0,2240,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,112.0,2240,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,114.0,2280,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,114.0,2280,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,114.0,2280,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,116.0,2320,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,116.0,2320,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,116.0,2320,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.33
+cam_20261106_100001,118.0,2360,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,118.0,2360,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,118.0,2360,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,120.0,2400,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,120.0,2400,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,120.0,2400,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,122.0,2440,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.46
+cam_20261106_100001,122.0,2440,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.33
+cam_20261106_100001,122.0,2440,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.45
+cam_20261106_100001,124.0,2480,A_train,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.39
+cam_20261106_100001,124.0,2480,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.26
+cam_20261106_100001,124.0,2480,C_train169,"Slow down due to the sharp left turn ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1195,1.04
+cam_20261106_100001,126.0,2520,A_train,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1231,1.67
+cam_20261106_100001,126.0,2520,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.37
+cam_20261106_100001,126.0,2520,C_train169,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.2
+cam_20261106_100001,128.0,2560,A_train,"Slow down due to the sharp left turn ahead A cautionary round about sign is observed on the left, indicating roundabout ahead; choose lane early. A cautionary round about sign is observed on the left, indicating roundabout ahead; choose lane early.",stop/slow,41,1231,1.67
+cam_20261106_100001,128.0,2560,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.27
+cam_20261106_100001,128.0,2560,C_train169,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1195,1.12
+cam_20261106_100001,130.0,2600,A_train,Slow down due to the roundabout entrance ahead,stop/slow,8,1231,0.39
+cam_20261106_100001,130.0,2600,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,130.0,2600,C_train169,"Slow down due to the roundabout traffic sign A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,38,1195,1.11
+cam_20261106_100001,132.0,2640,A_train,Slow down due to the roundabout entrance,stop/slow,7,1231,0.38
+cam_20261106_100001,132.0,2640,B_vehicle,Slow down due to the roundabout entry sign,stop/slow,8,619,0.27
+cam_20261106_100001,132.0,2640,C_train169,"Slow down due to the roundabout sign A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,37,1195,1.1
+cam_20261106_100001,134.0,2680,A_train,Slow down due to the roundabout entrance,stop/slow,7,1231,0.37
+cam_20261106_100001,134.0,2680,B_vehicle,Slow down due to the roundabout entrance,stop/slow,7,619,0.25
+cam_20261106_100001,134.0,2680,C_train169,Slow down due to the roundabout entrance,stop/slow,7,1195,0.36
+cam_20261106_100001,136.0,2720,A_train,Slow down due to the roundabout entrance,stop/slow,7,1231,0.37
+cam_20261106_100001,136.0,2720,B_vehicle,Stop because of cross traffic,stop/slow,5,619,0.19
+cam_20261106_100001,136.0,2720,C_train169,Slow down due to the roundabout entrance,stop/slow,7,1195,0.36
+cam_20261106_100001,138.0,2760,A_train,Slow down due to the roundabout entrance,stop/slow,7,1231,0.44
+cam_20261106_100001,138.0,2760,B_vehicle,Slow down due to the roundabout entrance,stop/slow,7,619,0.33
+cam_20261106_100001,138.0,2760,C_train169,Slow down due to the roundabout entrance,stop/slow,7,1195,0.44
+cam_20261106_100001,140.0,2800,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.45
+cam_20261106_100001,140.0,2800,B_vehicle,Slow down due to a sharp left turn,stop/slow,8,619,0.33
+cam_20261106_100001,140.0,2800,C_train169,Slow down due to the sharp left turn ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,142.0,2840,A_train,Slow down due to the sharp left curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,142.0,2840,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,142.0,2840,C_train169,Slow down due to the sharp left turn,stop/slow,8,1195,0.45
+cam_20261106_100001,144.0,2880,A_train,Slow down due to the sharp left turn,stop/slow,8,1231,0.46
+cam_20261106_100001,144.0,2880,B_vehicle,Slow down due to the sharp right turn,stop/slow,8,619,0.34
+cam_20261106_100001,144.0,2880,C_train169,Slow down due to the sharp left turn,stop/slow,8,1195,0.45
+cam_20261106_100001,146.0,2920,A_train,Slow down due to the sharp left turn,stop/slow,8,1231,0.46
+cam_20261106_100001,146.0,2920,B_vehicle,Slow down due to the sharp right turn,stop/slow,8,619,0.33
+cam_20261106_100001,146.0,2920,C_train169,Slow down due to the sharp left turn ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,148.0,2960,A_train,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1231,1.5
+cam_20261106_100001,148.0,2960,B_vehicle,Slow down due to the sharp left turn,stop/slow,8,619,0.33
+cam_20261106_100001,148.0,2960,C_train169,Slow down due to the sharp left turn,stop/slow,8,1195,0.45
+cam_20261106_100001,150.0,3000,A_train,Slow down due to the sharp left turn,stop/slow,8,1231,0.45
+cam_20261106_100001,150.0,3000,B_vehicle,Slow down due to a sharp right turn,stop/slow,8,619,0.33
+cam_20261106_100001,150.0,3000,C_train169,Slow down due to the sharp left turn,stop/slow,8,1195,0.45
+cam_20261106_100001,152.0,3040,A_train,Keep lane because the road ahead is clear.,keep,8,1231,0.39
+cam_20261106_100001,152.0,3040,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.25
+cam_20261106_100001,152.0,3040,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,154.0,3080,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,154.0,3080,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.37
+cam_20261106_100001,154.0,3080,C_train169,Slow down due to the speed bump ahead,stop/slow,8,1195,0.45
+cam_20261106_100001,156.0,3120,A_train,"Slow down due to the sharp left curve ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,1231,1.5
+cam_20261106_100001,156.0,3120,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,156.0,3120,C_train169,"Slow down due to the sharp left curve ahead A cautionary chevron sign is observed on the left, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the left, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,51,1195,1.87
+cam_20261106_100001,158.0,3160,A_train,"Slow down due to the sharp left turn A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,40,1231,1.23
+cam_20261106_100001,158.0,3160,B_vehicle,"Slow down due to the sharp left turn ahead A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.",stop/slow,39,619,1.01
+cam_20261106_100001,158.0,3160,C_train169,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1195,1.26
+cam_20261106_100001,160.0,3200,A_train,Slow down due to the sharp left turn,stop/slow,8,1231,0.37
+cam_20261106_100001,160.0,3200,B_vehicle,Slow down due to the sharp left turn,stop/slow,8,619,0.25
+cam_20261106_100001,160.0,3200,C_train169,Slow down due to the sharp left turn,stop/slow,8,1195,0.36
+cam_20261106_100001,162.0,3240,A_train,Slow down due to the sharp left curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,162.0,3240,B_vehicle,Slow down due to the sharp left turn,stop/slow,8,619,0.33
+cam_20261106_100001,162.0,3240,C_train169,Slow down due to the sharp left curve ahead,stop/slow,9,1195,0.49
+cam_20261106_100001,164.0,3280,A_train,Slow down due to a sharp left curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,164.0,3280,B_vehicle,Slow down due to a sharp left turn,stop/slow,8,619,0.33
+cam_20261106_100001,164.0,3280,C_train169,Slow down due to a sharp left turn,stop/slow,8,1195,0.44
+cam_20261106_100001,166.0,3320,A_train,Keep lane to continue driving because no immediate hazard is ahead.,keep,11,1231,0.56
+cam_20261106_100001,166.0,3320,B_vehicle,Slow down due to a pedestrian crossing the road,stop/slow,9,619,0.36
+cam_20261106_100001,166.0,3320,C_train169,Keep lane to continue driving because the lane ahead is clear.,keep,11,1195,0.56
+cam_20261106_100001,168.0,3360,A_train,Keep distance from the cart ahead because it is moving slowly in the same lane.,keep,15,1231,0.68
+cam_20261106_100001,168.0,3360,B_vehicle,Slow down due to a cart obstructing the lane ahead,stop/slow,10,619,0.41
+cam_20261106_100001,168.0,3360,C_train169,Keep distance from the cart ahead because it is moving slowly in the same lane.,keep,15,1195,0.68
+cam_20261106_100001,170.0,3400,A_train,Slow down due to a sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,170.0,3400,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,170.0,3400,C_train169,Slow down due to a sharp right curve ahead,stop/slow,9,1195,0.4
+cam_20261106_100001,172.0,3440,A_train,Slow down due to a pedestrian crossing the road,stop/slow,9,1231,0.47
+cam_20261106_100001,172.0,3440,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.33
+cam_20261106_100001,172.0,3440,C_train169,Slow down due to a pedestrian walking along the roadway edge,stop/slow,11,1195,0.52
+cam_20261106_100001,174.0,3480,A_train,Slow down due to a sharp right curve ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,174.0,3480,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.28
+cam_20261106_100001,174.0,3480,C_train169,Slow down due to a sharp right curve ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,176.0,3520,A_train,Adapt speed for the right curve ahead.,speed up,7,1231,0.48
+cam_20261106_100001,176.0,3520,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,176.0,3520,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,178.0,3560,A_train,Adapt speed for the right curve ahead.,speed up,7,1231,0.48
+cam_20261106_100001,178.0,3560,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,178.0,3560,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.44
+cam_20261106_100001,180.0,3600,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.4
+cam_20261106_100001,180.0,3600,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.28
+cam_20261106_100001,180.0,3600,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.39
+cam_20261106_100001,182.0,3640,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.47
+cam_20261106_100001,182.0,3640,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,182.0,3640,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,184.0,3680,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,184.0,3680,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.39
+cam_20261106_100001,184.0,3680,C_train169,Reduce speed due to road curvature,stop/slow,6,1195,0.39
+cam_20261106_100001,186.0,3720,A_train,Adapt speed for the sharp right curve ahead.,speed up,8,1231,0.51
+cam_20261106_100001,186.0,3720,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.39
+cam_20261106_100001,186.0,3720,C_train169,Adapt speed for the sharp right curve ahead.,speed up,8,1195,0.5
+cam_20261106_100001,188.0,3760,A_train,Slow down due to speed bumps ahead,stop/slow,7,1231,0.43
+cam_20261106_100001,188.0,3760,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.33
+cam_20261106_100001,188.0,3760,C_train169,Slow down due to speed bumps ahead,stop/slow,7,1195,0.42
+cam_20261106_100001,190.0,3800,A_train,Keep distance to the lead vehicle because it is directly ahead in the same lane.,keep,15,1231,0.68
+cam_20261106_100001,190.0,3800,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,190.0,3800,C_train169,Keep distance to the lead vehicle because it is directly ahead in the same lane.,keep,15,1195,0.67
+cam_20261106_100001,192.0,3840,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.4
+cam_20261106_100001,192.0,3840,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.25
+cam_20261106_100001,192.0,3840,C_train169,"Keep distance to the lead vehicle because it is directly ahead in the same lane. A cautionary chevron sign is observed on the left, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the left, indicating sharp change of direction ahead; slow down and follow the road.",keep,57,1195,1.59
+cam_20261106_100001,194.0,3880,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.37
+cam_20261106_100001,194.0,3880,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.25
+cam_20261106_100001,194.0,3880,C_train169,"Keep distance to the lead vehicle because it is directly ahead in the same lane. A mandatory speed limit sign is observed on the right, indicating follow speed limits. A mandatory speed limit sign is observed on the right, indicating follow speed limits.",keep,43,1195,1.19
+cam_20261106_100001,196.0,3920,A_train,Maintain speed due to clear lane ahead,keep,7,1231,0.44
+cam_20261106_100001,196.0,3920,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,196.0,3920,C_train169,Maintain speed due to clear lane ahead,keep,7,1195,0.44
+cam_20261106_100001,198.0,3960,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.46
+cam_20261106_100001,198.0,3960,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,198.0,3960,C_train169,Keep lane because the lane ahead is clear,keep,8,1195,0.44
+cam_20261106_100001,200.0,4000,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.46
+cam_20261106_100001,200.0,4000,B_vehicle,Keep lane because the lane ahead is clear.,keep,8,619,0.36
+cam_20261106_100001,200.0,4000,C_train169,Keep lane because the lane ahead is clear,keep,8,1195,0.46
+cam_20261106_100001,202.0,4040,A_train,Keep lane because the lane ahead is clear.,keep,8,1231,0.49
+cam_20261106_100001,202.0,4040,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,202.0,4040,C_train169,Keep lane because the lane ahead is clear,keep,8,1195,0.45
+cam_20261106_100001,204.0,4080,A_train,Keep lane because the lane ahead is clear.,keep,8,1231,0.48
+cam_20261106_100001,204.0,4080,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,204.0,4080,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.45
+cam_20261106_100001,206.0,4120,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.46
+cam_20261106_100001,206.0,4120,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,206.0,4120,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.45
+cam_20261106_100001,208.0,4160,A_train,Slow down due to the speed bumps ahead,stop/slow,8,1231,0.38
+cam_20261106_100001,208.0,4160,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.25
+cam_20261106_100001,208.0,4160,C_train169,"Slow down due to the speed bumps ahead A mandatory speed limit sign is observed on the right, indicating follow speed limits. A mandatory speed limit sign is observed on the right, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,210.0,4200,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.38
+cam_20261106_100001,210.0,4200,B_vehicle,Keep lane because the lane ahead is clear,keep,8,619,0.26
+cam_20261106_100001,210.0,4200,C_train169,Keep lane because the lane ahead is clear,keep,8,1195,0.37
+cam_20261106_100001,212.0,4240,A_train,Slow down due to the upcoming speed bumps,stop/slow,8,1231,0.37
+cam_20261106_100001,212.0,4240,B_vehicle,Keep lane because the lane ahead is clear,keep,8,619,0.25
+cam_20261106_100001,212.0,4240,C_train169,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.16
+cam_20261106_100001,214.0,4280,A_train,"Slow down due to the sharp right turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.18
+cam_20261106_100001,214.0,4280,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.26
+cam_20261106_100001,214.0,4280,C_train169,"Slow down due to the sharp right turn ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,1195,1.25
+cam_20261106_100001,216.0,4320,A_train,"Slow down due to the sharp right turn ahead A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.55
+cam_20261106_100001,216.0,4320,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.33
+cam_20261106_100001,216.0,4320,C_train169,"Slow down due to the sharp right turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.23
+cam_20261106_100001,218.0,4360,A_train,"Slow down due to the sharp right turn ahead A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the right, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.54
+cam_20261106_100001,218.0,4360,B_vehicle,Slow down due to the sharp right turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,218.0,4360,C_train169,"Slow down due to the sharp right turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.18
+cam_20261106_100001,220.0,4400,A_train,"Slow down due to the sharp left curve ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.17
+cam_20261106_100001,220.0,4400,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,220.0,4400,C_train169,"Slow down due to the sharp left turn ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1195,1.16
+cam_20261106_100001,222.0,4440,A_train,"Slow down due to the sharp left curve ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,37,1231,1.17
+cam_20261106_100001,222.0,4440,B_vehicle,"Slow down due to the sharp left turn ahead A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,51,619,1.33
+cam_20261106_100001,222.0,4440,C_train169,"Slow down due to the sharp left turn ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,37,1195,1.04
+cam_20261106_100001,224.0,4480,A_train,"Slow down due to the sharp left turn ahead A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,41,1231,1.25
+cam_20261106_100001,224.0,4480,B_vehicle,"Slow down due to the sharp left curve ahead A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the right, indicating median gap; U-turn possible.",stop/slow,41,619,1.14
+cam_20261106_100001,224.0,4480,C_train169,"Slow down due to the sharp left turn ahead A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,51,1195,1.45
+cam_20261106_100001,226.0,4520,A_train,"Slow down due to the speed bumps ahead A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,50,1231,1.44
+cam_20261106_100001,226.0,4520,B_vehicle,"Slow down due to the sharp left curve ahead A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible. A cautionary gap in median sign is observed on the left, indicating median gap; U-turn possible.",stop/slow,41,619,1.13
+cam_20261106_100001,226.0,4520,C_train169,Slow down due to the speed bumps ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,228.0,4560,A_train,Slow down due to the upcoming speed bumps,stop/slow,8,1231,0.38
+cam_20261106_100001,228.0,4560,B_vehicle,Slow down due to the sharp left turn ahead,stop/slow,9,619,0.28
+cam_20261106_100001,228.0,4560,C_train169,Slow down due to the upcoming speed bumps,stop/slow,8,1195,0.37
+cam_20261106_100001,230.0,4600,A_train,Stop because of red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,230.0,4600,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,230.0,4600,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,232.0,4640,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,232.0,4640,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,232.0,4640,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.33
+cam_20261106_100001,234.0,4680,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,234.0,4680,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,234.0,4680,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,236.0,4720,A_train,Stop due to red traffic light,stop/slow,6,1231,0.34
+cam_20261106_100001,236.0,4720,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,236.0,4720,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,238.0,4760,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,238.0,4760,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,238.0,4760,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,240.0,4800,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,240.0,4800,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,240.0,4800,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,242.0,4840,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,242.0,4840,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,242.0,4840,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.38
+cam_20261106_100001,244.0,4880,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,244.0,4880,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,244.0,4880,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,246.0,4920,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,246.0,4920,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,246.0,4920,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,248.0,4960,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,248.0,4960,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,248.0,4960,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,250.0,5000,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.38
+cam_20261106_100001,250.0,5000,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.26
+cam_20261106_100001,250.0,5000,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.37
+cam_20261106_100001,252.0,5040,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.37
+cam_20261106_100001,252.0,5040,B_vehicle,Maintain lane and prepare to change to the right lane because the right lane is clear.,keep,16,619,0.46
+cam_20261106_100001,252.0,5040,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.37
+cam_20261106_100001,254.0,5080,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.37
+cam_20261106_100001,254.0,5080,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.26
+cam_20261106_100001,254.0,5080,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.36
+cam_20261106_100001,256.0,5120,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.37
+cam_20261106_100001,256.0,5120,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.25
+cam_20261106_100001,256.0,5120,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.36
+cam_20261106_100001,258.0,5160,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.44
+cam_20261106_100001,258.0,5160,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.33
+cam_20261106_100001,258.0,5160,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.44
+cam_20261106_100001,260.0,5200,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.46
+cam_20261106_100001,260.0,5200,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.33
+cam_20261106_100001,260.0,5200,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.45
+cam_20261106_100001,262.0,5240,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.45
+cam_20261106_100001,262.0,5240,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,262.0,5240,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.38
+cam_20261106_100001,264.0,5280,A_train,Keep lane because the lane ahead is clear,keep,8,1231,0.37
+cam_20261106_100001,264.0,5280,B_vehicle,Maintain lane because the roadway ahead is clear,keep,8,619,0.27
+cam_20261106_100001,264.0,5280,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.36
+cam_20261106_100001,266.0,5320,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.44
+cam_20261106_100001,266.0,5320,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.33
+cam_20261106_100001,266.0,5320,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.44
+cam_20261106_100001,268.0,5360,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.38
+cam_20261106_100001,268.0,5360,B_vehicle,Maintain lane because of clear path ahead,keep,7,619,0.25
+cam_20261106_100001,268.0,5360,C_train169,Keep lane because the road ahead is clear,keep,8,1195,0.36
+cam_20261106_100001,270.0,5400,A_train,Keep lane because the road ahead is clear,keep,8,1231,0.44
+cam_20261106_100001,270.0,5400,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,270.0,5400,C_train169,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.36
+cam_20261106_100001,272.0,5440,A_train,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.28
+cam_20261106_100001,272.0,5440,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.26
+cam_20261106_100001,272.0,5440,C_train169,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,274.0,5480,A_train,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.03
+cam_20261106_100001,274.0,5480,B_vehicle,Maintain speed due to clear lane ahead,keep,7,619,0.26
+cam_20261106_100001,274.0,5480,C_train169,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,276.0,5520,A_train,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.03
+cam_20261106_100001,276.0,5520,B_vehicle,Slow down due to the speed limit sign,stop/slow,8,619,0.26
+cam_20261106_100001,276.0,5520,C_train169,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,278.0,5560,A_train,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.03
+cam_20261106_100001,278.0,5560,B_vehicle,"Slow down due to the speed limit sign A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,619,0.91
+cam_20261106_100001,278.0,5560,C_train169,Slow down due to the speed limit sign,stop/slow,8,1195,0.37
+cam_20261106_100001,280.0,5600,A_train,Slow down due to the speed limit sign,stop/slow,8,1231,0.44
+cam_20261106_100001,280.0,5600,B_vehicle,Slow down due to the speed limit sign,stop/slow,8,619,0.33
+cam_20261106_100001,280.0,5600,C_train169,Slow down due to the speed bump ahead,stop/slow,8,1195,0.44
+cam_20261106_100001,282.0,5640,A_train,Slow down due to red traffic light ahead,stop/slow,8,1231,0.45
+cam_20261106_100001,282.0,5640,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.35
+cam_20261106_100001,282.0,5640,C_train169,Slow down due to the sharp left curve ahead,stop/slow,9,1195,0.43
+cam_20261106_100001,284.0,5680,A_train,Slow down due to the sharp left curve ahead,stop/slow,9,1231,0.4
+cam_20261106_100001,284.0,5680,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.28
+cam_20261106_100001,284.0,5680,C_train169,Slow down due to the sharp left curve ahead,stop/slow,9,1195,0.39
+cam_20261106_100001,286.0,5720,A_train,Slow down due to red traffic light ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,286.0,5720,B_vehicle,Slow down due to a sharp left curve ahead,stop/slow,9,619,0.27
+cam_20261106_100001,286.0,5720,C_train169,Stop because of red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,288.0,5760,A_train,Stop because of red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,288.0,5760,B_vehicle,Slow down due to a sharp left curve ahead,stop/slow,9,619,0.28
+cam_20261106_100001,288.0,5760,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,290.0,5800,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,290.0,5800,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,290.0,5800,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,292.0,5840,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,292.0,5840,B_vehicle,Slow down due to a sharp left curve ahead,stop/slow,9,619,0.37
+cam_20261106_100001,292.0,5840,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,294.0,5880,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,294.0,5880,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,294.0,5880,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.45
+cam_20261106_100001,296.0,5920,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.4
+cam_20261106_100001,296.0,5920,B_vehicle,Slow down due to a sharp right turn,stop/slow,8,619,0.27
+cam_20261106_100001,296.0,5920,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.39
+cam_20261106_100001,298.0,5960,A_train,Keep lane to continue driving because no immediate hazard is ahead.,keep,11,1231,0.45
+cam_20261106_100001,298.0,5960,B_vehicle,Maintain lane and prepare to change to the right because the right lane is open and the adjacent right lane is clear.,keep,22,619,0.58
+cam_20261106_100001,298.0,5960,C_train169,Keep lane to continue driving because no immediate hazard is ahead.,keep,11,1195,0.45
+cam_20261106_100001,300.0,6000,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,300.0,6000,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.27
+cam_20261106_100001,300.0,6000,C_train169,Slow down due to the speed bump ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,302.0,6040,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,302.0,6040,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.33
+cam_20261106_100001,302.0,6040,C_train169,Slow down due to the red traffic light ahead,stop/slow,9,1195,0.4
+cam_20261106_100001,304.0,6080,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,304.0,6080,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,304.0,6080,C_train169,"Stop due to red traffic light A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,34,1195,1.1
+cam_20261106_100001,306.0,6120,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,306.0,6120,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.22
+cam_20261106_100001,306.0,6120,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.14
+cam_20261106_100001,308.0,6160,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,308.0,6160,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,308.0,6160,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.52
+cam_20261106_100001,310.0,6200,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.16
+cam_20261106_100001,310.0,6200,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,310.0,6200,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.32
+cam_20261106_100001,312.0,6240,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,312.0,6240,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,312.0,6240,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.52
+cam_20261106_100001,314.0,6280,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,314.0,6280,B_vehicle,Slow down due to the red traffic light ahead,stop/slow,9,619,0.36
+cam_20261106_100001,314.0,6280,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.25
+cam_20261106_100001,316.0,6320,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,316.0,6320,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.25
+cam_20261106_100001,316.0,6320,C_train169,Slow down due to the pedestrian crossing sign ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,318.0,6360,A_train,Slow down due to the red traffic light ahead,stop/slow,9,1231,0.39
+cam_20261106_100001,318.0,6360,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.25
+cam_20261106_100001,318.0,6360,C_train169,Slow down due to red traffic light ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,320.0,6400,A_train,Slow down due to red traffic light ahead,stop/slow,8,1231,0.51
+cam_20261106_100001,320.0,6400,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,320.0,6400,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.33
+cam_20261106_100001,322.0,6440,A_train,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1231,1.14
+cam_20261106_100001,322.0,6440,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.25
+cam_20261106_100001,322.0,6440,C_train169,Slow down due to the red traffic light ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,324.0,6480,A_train,Keep lane because the lane ahead is clear.,keep,8,1231,0.48
+cam_20261106_100001,324.0,6480,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.33
+cam_20261106_100001,324.0,6480,C_train169,Keep lane because the lane ahead is clear.,keep,8,1195,0.49
+cam_20261106_100001,326.0,6520,A_train,Keep lane because the lane ahead is clear.,keep,8,1231,0.48
+cam_20261106_100001,326.0,6520,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.33
+cam_20261106_100001,326.0,6520,C_train169,Keep lane because the lane ahead is clear.,keep,8,1195,0.47
+cam_20261106_100001,328.0,6560,A_train,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1231,1.54
+cam_20261106_100001,328.0,6560,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.33
+cam_20261106_100001,328.0,6560,C_train169,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.29
+cam_20261106_100001,330.0,6600,A_train,"Slow down due to the red traffic light ahead A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,45,1231,1.22
+cam_20261106_100001,330.0,6600,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.26
+cam_20261106_100001,330.0,6600,C_train169,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.14
+cam_20261106_100001,332.0,6640,A_train,"Slow down due to the vehicle ahead in the lane A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,38,1231,1.19
+cam_20261106_100001,332.0,6640,B_vehicle,Accelerate through the intersection because of green traffic light,speed up,9,619,0.3
+cam_20261106_100001,332.0,6640,C_train169,"Slow down due to the vehicle ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,35,1195,1.12
+cam_20261106_100001,334.0,6680,A_train,"Slow down due to the vehicle ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,35,1231,1.49
+cam_20261106_100001,334.0,6680,B_vehicle,"Slow down due to the vehicle ahead in the lane A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,38,619,1.46
+cam_20261106_100001,334.0,6680,C_train169,"Slow down due to the vehicle ahead A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,43,1195,1.18
+cam_20261106_100001,336.0,6720,A_train,"Slow down due to the red traffic light ahead A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,45,1231,1.21
+cam_20261106_100001,336.0,6720,B_vehicle,Slow down due to a vehicle crossing ahead,stop/slow,8,619,0.26
+cam_20261106_100001,336.0,6720,C_train169,Slow down due to a vehicle crossing ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,338.0,6760,A_train,"Slow down due to the speed bump ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.03
+cam_20261106_100001,338.0,6760,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.26
+cam_20261106_100001,338.0,6760,C_train169,"Slow down due to the speed bumps ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.14
+cam_20261106_100001,340.0,6800,A_train,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1231,1.15
+cam_20261106_100001,340.0,6800,B_vehicle,Slow down due to the speed bumps ahead,stop/slow,8,619,0.25
+cam_20261106_100001,340.0,6800,C_train169,"Slow down due to the speed bumps ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.01
+cam_20261106_100001,342.0,6840,A_train,"Slow down due to the speed bumps ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1231,1.15
+cam_20261106_100001,342.0,6840,B_vehicle,Slow down due to the upcoming speed bumps,stop/slow,8,619,0.25
+cam_20261106_100001,342.0,6840,C_train169,"Slow down due to the speed bumps ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.13
+cam_20261106_100001,344.0,6880,A_train,"Slow down due to the upcoming speed bumps A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1231,1.15
+cam_20261106_100001,344.0,6880,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.26
+cam_20261106_100001,344.0,6880,C_train169,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.14
+cam_20261106_100001,346.0,6920,A_train,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1231,1.52
+cam_20261106_100001,346.0,6920,B_vehicle,"Slow down due to the upcoming speed bumps A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,619,1.31
+cam_20261106_100001,346.0,6920,C_train169,"Slow down due to the speed bump ahead A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians. A cautionary pedestrian crossing sign is observed on the left, indicating stop/slow for pedestrians.",stop/slow,36,1195,1.14
+cam_20261106_100001,348.0,6960,A_train,"Slow down due to the speed bumps ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.03
+cam_20261106_100001,348.0,6960,B_vehicle,"Slow down due to the speed bump ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,619,0.91
+cam_20261106_100001,348.0,6960,C_train169,"Slow down due to the speed bump ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,350.0,7000,A_train,"Slow down due to the speed bump ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1231,1.02
+cam_20261106_100001,350.0,7000,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.25
+cam_20261106_100001,350.0,7000,C_train169,"Slow down due to the speed bumps ahead A mandatory speed limit sign is observed on the left, indicating follow speed limits. A mandatory speed limit sign is observed on the left, indicating follow speed limits.",stop/slow,36,1195,1.02
+cam_20261106_100001,352.0,7040,A_train,Slow down due to the stop sign ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,352.0,7040,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.25
+cam_20261106_100001,352.0,7040,C_train169,Slow down due to the stop sign ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,354.0,7080,A_train,Slow down due to the stop sign ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,354.0,7080,B_vehicle,Slow down due to the stop sign ahead,stop/slow,8,619,0.25
+cam_20261106_100001,354.0,7080,C_train169,Slow down due to the stop sign ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,356.0,7120,A_train,Slow down due to the stop sign ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,356.0,7120,B_vehicle,Stop due to a stop sign,stop/slow,6,619,0.21
+cam_20261106_100001,356.0,7120,C_train169,Slow down due to the stop sign,stop/slow,7,1195,0.34
+cam_20261106_100001,358.0,7160,A_train,Slow down due to the stop sign,stop/slow,7,1231,0.41
+cam_20261106_100001,358.0,7160,B_vehicle,Stop due to a stop sign,stop/slow,6,619,0.27
+cam_20261106_100001,358.0,7160,C_train169,Slow down due to the stop sign ahead,stop/slow,8,1195,0.45
+cam_20261106_100001,360.0,7200,A_train,Slow down due to cones blocking the lane ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,360.0,7200,B_vehicle,Slow down due to cones blocking the lane ahead,stop/slow,9,619,0.36
+cam_20261106_100001,360.0,7200,C_train169,Slow down due to a cone blocking the lane ahead,stop/slow,10,1195,0.5
+cam_20261106_100001,362.0,7240,A_train,Slow down due to the sharp right turn ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,362.0,7240,B_vehicle,Slow down due to a sharp right turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,362.0,7240,C_train169,Slow down due to the sharp right turn ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,364.0,7280,A_train,Slow down due to a sharp right turn ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,364.0,7280,B_vehicle,Slow down due to a sharp right turn ahead,stop/slow,9,619,0.36
+cam_20261106_100001,364.0,7280,C_train169,Slow down due to a sharp right turn ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,366.0,7320,A_train,Slow down due to a sharp right curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,366.0,7320,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,366.0,7320,C_train169,Slow down due to a sharp right curve ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,368.0,7360,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.48
+cam_20261106_100001,368.0,7360,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,368.0,7360,C_train169,Slow down due to a sharp right curve ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,370.0,7400,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,370.0,7400,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.36
+cam_20261106_100001,370.0,7400,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.47
+cam_20261106_100001,372.0,7440,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,372.0,7440,B_vehicle,Slow down due to the sharp right curve ahead,stop/slow,9,619,0.37
+cam_20261106_100001,372.0,7440,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,374.0,7480,A_train,Slow down due to the sharp right curve ahead,stop/slow,9,1231,0.49
+cam_20261106_100001,374.0,7480,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.39
+cam_20261106_100001,374.0,7480,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,376.0,7520,A_train,Adapt speed for the sharp right curve ahead.,speed up,8,1231,0.52
+cam_20261106_100001,376.0,7520,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.3
+cam_20261106_100001,376.0,7520,C_train169,Adapt speed for the sharp right curve ahead.,speed up,8,1195,0.41
+cam_20261106_100001,378.0,7560,A_train,Adapt speed for the sharp right curve ahead.,speed up,8,1231,0.42
+cam_20261106_100001,378.0,7560,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.3
+cam_20261106_100001,378.0,7560,C_train169,Adapt speed for the sharp right curve ahead.,speed up,8,1195,0.4
+cam_20261106_100001,380.0,7600,A_train,Adapt speed for the sharp right curve ahead.,speed up,8,1231,0.41
+cam_20261106_100001,380.0,7600,B_vehicle,Adapt speed for the sharp right curve ahead.,speed up,8,619,0.3
+cam_20261106_100001,380.0,7600,C_train169,Slow down due to the sharp right curve ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,382.0,7640,A_train,"Slow down due to the sharp right curve ahead A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,51,1231,1.47
+cam_20261106_100001,382.0,7640,B_vehicle,Slow down due to a sharp right curve ahead,stop/slow,9,619,0.28
+cam_20261106_100001,382.0,7640,C_train169,"Slow down due to a sharp right curve ahead A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road. A cautionary chevron sign is observed on the right, indicating sharp change of direction ahead; slow down and follow the road.",stop/slow,51,1195,1.46
+cam_20261106_100001,384.0,7680,A_train,Slow down due to a vehicle crossing ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,384.0,7680,B_vehicle,Slow down due to a vehicle crossing ahead,stop/slow,8,619,0.26
+cam_20261106_100001,384.0,7680,C_train169,Slow down due to a vehicle crossing ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,386.0,7720,A_train,Slow down due to a vehicle crossing ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,386.0,7720,B_vehicle,Slow down due to a vehicle turning across the lane ahead,stop/slow,11,619,0.32
+cam_20261106_100001,386.0,7720,C_train169,Slow down due to a vehicle crossing ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,388.0,7760,A_train,Slow down due to cones blocking the lane ahead,stop/slow,9,1231,0.47
+cam_20261106_100001,388.0,7760,B_vehicle,Slow down due to cones blocking the lane ahead,stop/slow,9,619,0.36
+cam_20261106_100001,388.0,7760,C_train169,Slow down due to cones blocking the lane ahead,stop/slow,9,1195,0.48
+cam_20261106_100001,390.0,7800,A_train,Stop because of a pedestrian crossing the road,stop/slow,8,1231,0.37
+cam_20261106_100001,390.0,7800,B_vehicle,Slow down due to the speed bump ahead,stop/slow,8,619,0.25
+cam_20261106_100001,390.0,7800,C_train169,Stop because of a pedestrian crossing the road,stop/slow,8,1195,0.36
+cam_20261106_100001,392.0,7840,A_train,Slow down due to a speed bump ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,392.0,7840,B_vehicle,Slow down due to a cone blocking the lane ahead,stop/slow,10,619,0.3
+cam_20261106_100001,392.0,7840,C_train169,Slow down due to a speed bump ahead,stop/slow,8,1195,0.36
+cam_20261106_100001,394.0,7880,A_train,Slow down due to a traffic cone blocking the lane ahead,stop/slow,11,1231,0.44
+cam_20261106_100001,394.0,7880,B_vehicle,Slow down due to a cone blocking the lane ahead,stop/slow,10,619,0.3
+cam_20261106_100001,394.0,7880,C_train169,Slow down due to a traffic cone blocking the lane ahead,stop/slow,11,1195,0.42
+cam_20261106_100001,396.0,7920,A_train,Slow down due to a speed bump ahead,stop/slow,8,1231,0.37
+cam_20261106_100001,396.0,7920,B_vehicle,Keep lane because the lane ahead is clear.,keep,8,619,0.27
+cam_20261106_100001,396.0,7920,C_train169,Slow down due to a sharp left curve ahead,stop/slow,9,1195,0.38
+cam_20261106_100001,398.0,7960,A_train,Keep lane because the road ahead is clear.,keep,8,1231,0.47
+cam_20261106_100001,398.0,7960,B_vehicle,Maintain lane because of clear lane ahead,keep,7,619,0.33
+cam_20261106_100001,398.0,7960,C_train169,Keep lane because the road ahead is clear.,keep,8,1195,0.47
+cam_20261106_100001,400.0,8000,A_train,Stop due to red traffic light,stop/slow,6,1231,0.33
+cam_20261106_100001,400.0,8000,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.21
+cam_20261106_100001,400.0,8000,C_train169,Stop due to red traffic light ahead,stop/slow,7,1195,0.34
+cam_20261106_100001,402.0,8040,A_train,Stop due to red traffic light,stop/slow,6,1231,0.39
+cam_20261106_100001,402.0,8040,B_vehicle,Stop because of red traffic light ahead,stop/slow,7,619,0.3
+cam_20261106_100001,402.0,8040,C_train169,"Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.",stop/slow,42,1195,1.54
+cam_20261106_100001,404.0,8080,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,404.0,8080,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,404.0,8080,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,406.0,8120,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,406.0,8120,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,406.0,8120,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,408.0,8160,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,408.0,8160,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,408.0,8160,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39
+cam_20261106_100001,410.0,8200,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,410.0,8200,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,410.0,8200,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.4
+cam_20261106_100001,412.0,8240,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,412.0,8240,B_vehicle,Slow down due to the red traffic light ahead,stop/slow,9,619,0.36
+cam_20261106_100001,412.0,8240,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.38
+cam_20261106_100001,414.0,8280,A_train,Stop due to red traffic light,stop/slow,6,1231,0.4
+cam_20261106_100001,414.0,8280,B_vehicle,Stop due to red traffic light,stop/slow,6,619,0.27
+cam_20261106_100001,414.0,8280,C_train169,Stop due to red traffic light,stop/slow,6,1195,0.39

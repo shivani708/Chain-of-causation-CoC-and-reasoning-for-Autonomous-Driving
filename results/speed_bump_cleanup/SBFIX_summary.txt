@@ -1,0 +1,9 @@
+SPEED-BUMP FIX DATA
+CoC train samples           62487
+speed-bump answers          7554 (12.1%)
+  27B saw a bump (kept)     79
+  no bump seen (dropped)    7475
+cleaned CoC                 55012  speed-bump share 0.14%
+LoRA train set              24190 = 16000 cleaned CoC + 8190 RFT LingoQA
+answer openings before      slow down 34.0%, yield due 14.7%, nudge left 7.8%, maintain speed 7.2%, decelerate due 5.4%, keep distance 4.5%, nudge right 2.9%, decelerate to 2.2%
+answer openings after       slow down 26.0%, yield due 16.6%, nudge left 8.8%, maintain speed 8.2%, decelerate due 5.7%, keep distance 5.1%, nudge right 3.2%, decelerate to 2.5%

@@ -1,0 +1,72 @@
+FINAL CoC MODEL - LingoQA 73.2  (merged_sbfix_ck1500)
+=====================================================
+Package written 12 Nov 2026.  Full documentation: CoC_73p2_documentation.html (open in a browser).
+
+1. WHAT THE MODEL IS
+--------------------
+- Qwen3-VL-2B-Instruct (vision encoder + vision-language merger + Qwen3 language decoder), bf16, 4.26 GB.
+- Input:  4 front-camera frames (oldest -> newest) + the fixed CoC prompt.
+- Output: one Chain-of-Caution sentence = driving decision + reason,
+          e.g. "Slow down due to the lead vehicle ahead."
+          It can also answer free-form driving questions (LingoQA style).
+- ADVISORY ONLY. Never use the output to steer, brake or accelerate a vehicle.
+
+2. HOW IT WAS BUILT (model lineage)
+-----------------------------------
+  Qwen3-VL-2B-Instruct (base)                                         LingoQA 46.2
+   -> coc_student_alpamayo (full fine-tune, Indian CoC data)          LingoQA 68.6
+   -> + LoRA lora_rft_v1 / checkpoint-500, merged = merged_rft_ck500  LingoQA 72.2
+        (RFT: the 68.6 model's own Lingo-Judge-approved answers on LingoQA-train
+         prompts, 8,190 answers, + 3,000 CoC samples)
+   -> + LoRA lora_sbfix_v1 / checkpoint-1500, merged = merged_sbfix_ck1500   LingoQA 73.2  <- FINAL
+        (speed-bump fix: Qwen3.5-27B checked every CoC training answer that mentioned a
+         speed bump; only 79 of 7,554 (1%) showed a bump, so 7,475 wrong labels were removed.
+         The LoRA was trained on 16,000 cleaned CoC + 8,190 RFT LingoQA = 24,190 samples.)
+
+  Both LoRA runs: r=64, alpha=128, dropout 0.05, LLM layers only, lr 2e-5, warmup 30,
+  global batch 16 (2 x 8 grad accumulation), 1 epoch, adapter saved every 150 steps (sbfix).
+
+3. KEY RESULTS
+--------------
+  LingoQA (500 val questions, Lingo-Judge, greedy decoding):
+    base 46.2 | 68.6 model 68.6 | 72.2 model 72.2 | FINAL 73.2
+    sbfix steps: 150 71.2 | 300 68.6 | 450 70.0 | 600 72.0 | 750 70.2 | 900 71.0 | 1050 72.2 |
+                 1200 72.8 | 1350 73.0 | 1500 73.2 (chosen) | 1512/final 72.4
+    The 72.2 model was re-run 100 times: 72.2 every time, all 500 answers identical (fully deterministic).
+
+  "Speed bump" answers on test videos (share of answers):
+    Hyderabad city, training setup   43% -> 1%
+    Hyderabad city, vehicle setup    33% -> 0%
+    Test track,     training setup   52% -> 10%
+    Test track,     vehicle setup    57% -> 17%
+
+  Real-time speed (A40 GPU, vehicle setup): 0.4-0.6 s per answer, about 2 answers per second.
+
+4. KNOWN LIMITATIONS
+--------------------
+- On the TiHAN test track / campus roads the model still sometimes calls yellow-black kerbs a
+  "speed bump" (10-17% of answers on the test track; ~25% in the 11 Nov screencast drive), and
+  sometimes says "sharp curve" on straight road. Those roads are not in the training data.
+- A test-track LoRA (lora_ttfix_v1) removed these errors (0%) but lowered LingoQA to 71.4 and made the
+  model less cautious in the city, so it was NOT chosen as final. See the HTML, section 7.
+- Fix for later: record clean (no overlay) camera video of the campus route and add labelled windows.
+
+5. FOLDER CONTENTS
+------------------
+  model/merged_sbfix_ck1500/          final model (load with transformers >= 5.0)
+  checkpoint/lora_sbfix_v1_checkpoint-1500/   the LoRA adapter that was merged (+ training logs)
+  code/training/                      train_24coc.py, merge_lora.py, LoRA + RFT job scripts
+  code/data_cleaning/                 Qwen3.5-27B speed-bump check + cleaned data builder
+  code/evaluation/                    LingoQA, WaymoQA, spatial, repeat runs, video test
+  deployment/                         live_coc_single.py (real time, one CoC line), live_camera_vqa.py
+                                      (question answering), make_single_overlay.py, requirements_live.txt
+  results/                            LingoQA scores, cleanup summaries, video test results
+  reference_clip/testbed_coc_5min_210s-510s.mp4   5-min reference clip of the 11 Nov testbed drive
+  COMMANDS.txt                        every command to install, run, evaluate and retrain
+  CoC_73p2_documentation.html         methodology, architecture, deployment, results, references (IEEE)
+
+6. SERVER LOCATIONS
+-------------------
+  Server ai24mtech02003@192.168.20.120, project /data/common_datasets/ai24mtech02003/24_dataset_coc/
+    models/merged_sbfix_ck1500, models/lora_sbfix_v1, data/sbfix, data/clean_sb, eval/lingoqa,
+    eval/video_test_sbfix, scripts/

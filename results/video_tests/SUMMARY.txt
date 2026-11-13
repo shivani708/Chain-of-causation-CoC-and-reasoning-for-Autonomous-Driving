@@ -1,0 +1,118 @@
+
+=== Hyderabad1  (232 s video, 30 fps, decision every 2 s, run time 214 s) ===
+
+[A_train]  windows 115   unique answers 38   mean words 10.3   mean latency 0.53 s   prompt tokens 1195
+  decision classes: stop/slow 77 (67%), keep 38 (33%)
+  top openings: 'slow down due' x49; 'keep distance to' x21; 'decelerate due to' x19; 'maintain speed due' x13; 'stop due to' x3; 'stop because of' x3; 'keep lane because' x2; 'stop to keep' x2
+  most repeated full answers:
+    x30: Slow down due to the lead vehicle ahead
+    x8: Decelerate due to the slowing lead vehicle
+    x7: Maintain speed due to the lead vehicle ahead
+    x7: Keep distance to the lead vehicle because traffic ahead is slow.
+    x6: Keep distance to the lead vehicle because it is directly ahead in the same lane.
+  sample answers:
+    t=   2.0s  Maintain speed due to clear lane ahead
+    t= 30.03s  Decelerate due to the lead vehicle ahead
+    t= 58.06s  Keep distance to the lead vehicle because traffic ahead is slow.
+    t= 86.09s  Maintain speed due to the lead motorcycle ahead
+    t=114.11s  Slow down due to a pedestrian crossing the road
+    t=142.14s  Slow down due to the lead vehicle ahead
+    t=170.17s  Keep distance to the lead vehicle because traffic ahead is slow.
+    t= 198.2s  Keep distance to the lead vehicle because traffic ahead is slow.
+
+[B_vehicle]  windows 115   unique answers 36   mean words 10.1   mean latency 0.40 s   prompt tokens 619
+  decision classes: stop/slow 60 (52%), keep 55 (48%)
+  top openings: 'slow down due' x45; 'keep distance to' x31; 'maintain speed due' x17; 'stop due to' x8; 'maintain lane because' x7; 'decelerate due to' x6; 'yield due to' x1
+  most repeated full answers:
+    x24: Slow down due to the lead vehicle ahead
+    x15: Keep distance to the lead vehicle because it is directly ahead in the same lane.
+    x12: Maintain speed due to the lead vehicle ahead
+    x9: Keep distance to the lead vehicle because traffic ahead is slow.
+    x5: Stop due to the lead vehicle blocking the lane
+  sample answers:
+    t=   2.0s  Maintain lane because the lane ahead is clear
+    t= 30.03s  Decelerate due to the lead vehicle ahead
+    t= 58.06s  Keep distance to the lead vehicle because traffic ahead is congested.
+    t= 86.09s  Maintain speed due to the lead vehicle ahead
+    t=114.11s  Slow down due to pedestrians crossing the road
+    t=142.14s  Slow down due to the lead vehicle ahead
+    t=170.17s  Keep distance to the lead vehicle because traffic ahead is slow
+    t= 198.2s  Keep distance to the lead vehicle because it is directly ahead in the same lane.
+
+[C_train169]  windows 115   unique answers 38   mean words 10.3   mean latency 0.51 s   prompt tokens 1195
+  decision classes: stop/slow 77 (67%), keep 38 (33%)
+  top openings: 'slow down due' x49; 'keep distance to' x21; 'decelerate due to' x19; 'maintain speed due' x13; 'stop due to' x3; 'stop because of' x3; 'keep lane because' x2; 'stop to keep' x2
+  most repeated full answers:
+    x30: Slow down due to the lead vehicle ahead
+    x8: Decelerate due to the slowing lead vehicle
+    x7: Maintain speed due to the lead vehicle ahead
+    x7: Keep distance to the lead vehicle because traffic ahead is slow.
+    x6: Keep distance to the lead vehicle because it is directly ahead in the same lane.
+  sample answers:
+    t=   2.0s  Maintain speed due to clear lane ahead
+    t= 30.03s  Decelerate due to the lead vehicle ahead
+    t= 58.06s  Keep distance to the lead vehicle because traffic ahead is slow.
+    t= 86.09s  Maintain speed due to the lead motorcycle ahead
+    t=114.11s  Slow down due to a pedestrian crossing the road
+    t=142.14s  Slow down due to the lead vehicle ahead
+    t=170.17s  Keep distance to the lead vehicle because traffic ahead is slow.
+    t= 198.2s  Keep distance to the lead vehicle because traffic ahead is slow.
+
+=== cam_20261106_100001  (416 s video, 20 fps, decision every 2 s, run time 384 s) ===
+
+[A_train]  windows 207   unique answers 66   mean words 15.3   mean latency 0.63 s   prompt tokens 1231
+  decision classes: stop/slow 173 (84%), keep 28 (14%), speed up 6 (3%)
+  top openings: 'slow down due' x102; 'stop due to' x66; 'keep lane because' x23; 'adapt speed for' x6; 'stop because of' x5; 'keep lane to' x2; 'keep distance from' x1; 'keep distance to' x1
+  most repeated full answers:
+    x55: Stop due to red traffic light
+    x11: Slow down due to the sharp right curve ahead
+    x9: Keep lane because the lane ahead is clear
+    x8: Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.
+    x8: Keep lane because the road ahead is clear
+  sample answers:
+    t=   2.0s  Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.
+    t=  52.0s  Stop due to red traffic light
+    t= 102.0s  Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.
+    t= 152.0s  Keep lane because the road ahead is clear.
+    t= 202.0s  Keep lane because the lane ahead is clear.
+    t= 252.0s  Keep lane because the road ahead is clear
+    t= 302.0s  Stop due to red traffic light
+    t= 352.0s  Slow down due to the stop sign ahead
+
+[B_vehicle]  windows 207   unique answers 51   mean words 9.6   mean latency 0.34 s   prompt tokens 619
+  decision classes: stop/slow 171 (83%), keep 27 (13%), speed up 9 (4%)
+  top openings: 'slow down due' x112; 'stop due to' x57; 'maintain speed due' x13; 'maintain lane because' x8; 'adapt speed for' x6; 'keep lane because' x4; 'accelerate because of' x2; 'stop because of' x2
+  most repeated full answers:
+    x53: Stop due to red traffic light
+    x13: Slow down due to the speed bumps ahead
+    x13: Maintain speed due to clear lane ahead
+    x12: Slow down due to the speed bump ahead
+    x9: Slow down due to the sharp left turn ahead
+  sample answers:
+    t=   2.0s  Slow down due to the red traffic light ahead
+    t=  52.0s  Stop due to red traffic light
+    t= 102.0s  Stop due to red traffic light
+    t= 152.0s  Slow down due to the speed bump ahead
+    t= 202.0s  Maintain speed due to clear lane ahead
+    t= 252.0s  Maintain lane and prepare to change to the right lane because the right lane is clear.
+    t= 302.0s  Slow down due to the speed bump ahead
+    t= 352.0s  Slow down due to the speed bump ahead
+
+[C_train169]  windows 207   unique answers 74   mean words 17.2   mean latency 0.65 s   prompt tokens 1195
+  decision classes: stop/slow 177 (86%), keep 26 (13%), speed up 4 (2%)
+  top openings: 'slow down due' x104; 'stop due to' x69; 'keep lane because' x19; 'stop because of' x3; 'adapt speed for' x3; 'keep distance to' x3; 'keep lane to' x2; 'accelerate because of' x1
+  most repeated full answers:
+    x47: Stop due to red traffic light
+    x11: Slow down due to the sharp right curve ahead
+    x10: Keep lane because the road ahead is clear
+    x9: Stop due to red traffic light A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic. A mandatory give way sign is observed on the left, indicating slow and yield to main road traffic.
+    x6: Slow down due to the speed bumps ahead
+  sample answers:
+    t=   2.0s  Stop due to red traffic light A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed. A mandatory u turn prohibited sign is observed on the left, indicating u-turn not allowed.
+    t=  52.0s  Stop due to red traffic light
+    t= 102.0s  Stop due to red traffic light A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign. A mandatory stop sign is observed on the right, indicating with stop line: stop before line; else before sign.
+    t= 152.0s  Slow down due to the sharp right curve ahead
+    t= 202.0s  Keep lane because the lane ahead is clear
+    t= 252.0s  Keep lane because the road ahead is clear
+    t= 302.0s  Slow down due to the red traffic light ahead
+    t= 352.0s  Slow down due to the stop sign ahead

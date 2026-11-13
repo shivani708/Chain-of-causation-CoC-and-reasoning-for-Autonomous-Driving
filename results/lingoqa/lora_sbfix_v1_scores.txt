@@ -1,0 +1,12 @@
+LINGOQA lora_sbfix_v1_checkpoint-150 | The overall benchmark score is 71.2% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-300 | The overall benchmark score is 68.60000000000001% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-450 | The overall benchmark score is 70.0% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-600 | The overall benchmark score is 72.0% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-750 | The overall benchmark score is 70.19999999999999% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-900 | The overall benchmark score is 71.0% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-1050 | The overall benchmark score is 72.2% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-1200 | The overall benchmark score is 72.8% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-1350 | The overall benchmark score is 73.0% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-1500 | The overall benchmark score is 73.2% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_checkpoint-1512 | The overall benchmark score is 72.39999999999999% | literal_action_justification=0
+LINGOQA lora_sbfix_v1_final | The overall benchmark score is 72.39999999999999% | literal_action_justification=0

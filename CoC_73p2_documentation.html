@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CoC Model 73.2</title>
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --ink:#1d1f23; --muted:#5b6270; --line:#e3e1db;
+  --accent:#2457a6; --accent-soft:#e8eef8; --good:#1f7a4d; --good-soft:#e5f3ec;
+  --warn:#9a5b00; --warn-soft:#fbf0dd; --code:#f3f2ee;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171b; --surface:#1d2025; --ink:#e7e8ea; --muted:#a2a8b3; --line:#30343b;
+    --accent:#7fa8e8; --accent-soft:#22304a; --good:#6fcf9c; --good-soft:#1c3328;
+    --warn:#e7b25c; --warn-soft:#3a2f1c; --code:#24272d;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171b; --surface:#1d2025; --ink:#e7e8ea; --muted:#a2a8b3; --line:#30343b;
+  --accent:#7fa8e8; --accent-soft:#22304a; --good:#6fcf9c; --good-soft:#1c3328;
+  --warn:#e7b25c; --warn-soft:#3a2f1c; --code:#24272d;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:980px;margin:0 auto;padding:32px 16px 64px}
+header h1{font-size:2rem;margin:0 0 4px;line-height:1.2}
+header p{margin:0;color:var(--muted)}
+nav{margin:20px 0 8px;display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:.85rem;color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;background:var(--surface)}
+h2{font-size:1.35rem;margin:44px 0 10px;padding-top:12px;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:22px 0 6px}
+p,li{max-width:76ch}
+a{color:var(--accent)}
+code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em}
+code{background:var(--code);padding:1px 5px;border-radius:4px}
+pre{background:var(--code);padding:12px 14px;border-radius:8px;overflow-x:auto;line-height:1.45;border:1px solid var(--line)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px}
+.card .v{font-size:1.7rem;font-weight:650;line-height:1.1}
+.card .l{color:var(--muted);font-size:.85rem;margin-top:4px}
+.tbl{overflow-x:auto;margin:10px 0 6px}
+table{border-collapse:collapse;width:100%;background:var(--surface);font-size:.92rem}
+th,td{border:1px solid var(--line);padding:6px 9px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);font-weight:600}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.best td{background:var(--good-soft);font-weight:600}
+.note{background:var(--warn-soft);border-left:4px solid var(--warn);padding:10px 14px;border-radius:6px;margin:14px 0}
+.ok{background:var(--good-soft);border-left:4px solid var(--good);padding:10px 14px;border-radius:6px;margin:14px 0}
+figure{margin:16px 0}
+figcaption{color:var(--muted);font-size:.85rem;margin-top:6px}
+svg text{font-family:system-ui,sans-serif}
+.refs li{margin-bottom:8px}
+.small{font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>Chain-of-Caution Driving Model: LingoQA 73.2</h1>
+  <p>Final model <code>merged_sbfix_ck1500</code>, Qwen3-VL-2B, Indian roads. Methodology, architecture, deployment, results and references. Package of 12 Nov 2026.</p>
+</header>
+
+<nav>
+  <a href="#overview">1 Overview</a><a href="#arch">2 Architecture</a><a href="#method">3 Methodology</a>
+  <a href="#input">4 Input pipeline</a><a href="#deploy">5 Deployment</a><a href="#results">6 Results</a>
+  <a href="#limits">7 Limitations</a><a href="#package">8 Package</a><a href="#refs">9 References</a>
+</nav>
+
+<section id="overview">
+<h2>1. Overview</h2>
+<p>The model looks at the last four front-camera frames and writes one <em>Chain-of-Caution</em> (CoC) sentence: the driving decision followed by its reason, for example <em>"Yield due to a pedestrian walking in the lane ahead."</em> It can also answer free-form driving questions in the LingoQA style. It is a 2-billion-parameter vision-language model, so it runs in real time on one GPU.</p>
+<div class="cards">
+  <div class="card"><div class="v">73.2</div><div class="l">LingoQA score (base model 46.2)</div></div>
+  <div class="card"><div class="v">0–1%</div><div class="l">"speed bump" answers on the Hyderabad city video (was 33–43%)</div></div>
+  <div class="card"><div class="v">0.4–0.6 s</div><div class="l">per answer on an A40 GPU, about 2 answers per second</div></div>
+  <div class="card"><div class="v">4.26 GB</div><div class="l">model weights, bf16, single file</div></div>
+</div>
+<div class="note"><strong>Advisory only.</strong> The output explains and describes the scene. It must never be used to steer, brake or accelerate a vehicle. Always keep a safety driver.</div>
+</section>
+
+<section id="arch">
+<h2>2. Architecture</h2>
+<p>The model is Qwen3-VL-2B-Instruct [1] with two LoRA adapters [5] merged into its weights. Qwen3-VL keeps the three-module design of Qwen2.5-VL [2]: a vision encoder, a vision-language merger that compresses image patches into tokens, and a Qwen3 [3] language decoder. After merging, the model is a plain Qwen3-VL checkpoint and needs no extra code.</p>
+<figure>
+<svg viewBox="0 0 940 330" width="100%" role="img" aria-label="Model architecture diagram">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+  <g font-size="13" fill="var(--ink)">
+    <rect x="10" y="20" width="150" height="190" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+    <text x="85" y="44" text-anchor="middle" font-weight="600">Input</text>
+    <rect x="28" y="58" width="114" height="26" rx="5" fill="var(--accent-soft)"/><text x="85" y="76" text-anchor="middle">frame 1 (t−0.75 s)</text>
+    <rect x="28" y="90" width="114" height="26" rx="5" fill="var(--accent-soft)"/><text x="85" y="108" text-anchor="middle">frame 2</text>
+    <rect x="28" y="122" width="114" height="26" rx="5" fill="var(--accent-soft)"/><text x="85" y="140" text-anchor="middle">frame 3</text>
+    <rect x="28" y="154" width="114" height="26" rx="5" fill="var(--accent-soft)"/><text x="85" y="172" text-anchor="middle">frame 4 (now)</text>
+    <text x="85" y="200" text-anchor="middle" fill="var(--muted)" font-size="12">+ fixed CoC prompt</text>
+
+    <rect x="210" y="40" width="170" height="80" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+    <text x="295" y="70" text-anchor="middle" font-weight="600">Vision encoder</text>
+    <text x="295" y="90" text-anchor="middle" fill="var(--muted)" font-size="12">ViT, frozen in LoRA runs</text>
+    <text x="295" y="106" text-anchor="middle" fill="var(--muted)" font-size="12">≤ 301,056 px per frame</text>
+
+    <rect x="210" y="150" width="170" height="70" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+    <text x="295" y="178" text-anchor="middle" font-weight="600">VL merger</text>
+    <text x="295" y="198" text-anchor="middle" fill="var(--muted)" font-size="12">~264 tokens per 1280×720 frame</text>
+
+    <rect x="430" y="40" width="250" height="180" rx="10" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5"/>
+    <text x="555" y="68" text-anchor="middle" font-weight="600">Qwen3 language decoder</text>
+    <text x="555" y="90" text-anchor="middle" fill="var(--muted)" font-size="12">image tokens + prompt tokens</text>
+    <rect x="450" y="104" width="210" height="30" rx="6" fill="var(--good-soft)"/><text x="555" y="124" text-anchor="middle" font-size="12">LoRA 1: RFT (ckpt 500) → 72.2</text>
+    <rect x="450" y="140" width="210" height="30" rx="6" fill="var(--good-soft)"/><text x="555" y="160" text-anchor="middle" font-size="12">LoRA 2: speed-bump fix (ckpt 1500) → 73.2</text>
+    <text x="555" y="200" text-anchor="middle" fill="var(--muted)" font-size="12">both merged into the weights (r 64, α 128)</text>
+
+    <rect x="730" y="80" width="195" height="100" rx="10" fill="var(--surface)" stroke="var(--line)"/>
+    <text x="827" y="108" text-anchor="middle" font-weight="600">Output (greedy)</text>
+    <text x="827" y="132" text-anchor="middle" font-size="12">"Slow down due to the</text>
+    <text x="827" y="148" text-anchor="middle" font-size="12">lead vehicle ahead."</text>
+    <text x="827" y="168" text-anchor="middle" fill="var(--muted)" font-size="12">≤ 96 new tokens</text>
+
+    <line x1="160" y1="115" x2="206" y2="82" stroke="var(--muted)" marker-end="url(#ar)"/>
+    <line x1="295" y1="120" x2="295" y2="146" stroke="var(--muted)" marker-end="url(#ar)"/>
+    <line x1="380" y1="185" x2="426" y2="160" stroke="var(--muted)" marker-end="url(#ar)"/>
+    <line x1="160" y1="196" x2="426" y2="205" stroke="var(--muted)" stroke-dasharray="4 4" marker-end="url(#ar)"/>
+    <line x1="680" y1="130" x2="726" y2="130" stroke="var(--muted)" marker-end="url(#ar)"/>
+  </g>
+  <g font-size="12" fill="var(--muted)">
+    <text x="10" y="260">Model lineage:</text>
+    <text x="10" y="282">Qwen3-VL-2B-Instruct (46.2) → coc_student_alpamayo, full fine-tune on Indian CoC (68.6) → + RFT LoRA, merged_rft_ck500 (72.2)</text>
+    <text x="10" y="302">→ + speed-bump-fix LoRA, merged_sbfix_ck1500 (73.2, final)</text>
+  </g>
+</svg>
+<figcaption>Figure 1. Data flow at inference time and how the final weights were built. Numbers in brackets are LingoQA scores.</figcaption>
+</figure>
+<div class="tbl"><table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Base model</td><td>Qwen3-VL-2B-Instruct [1]</td></tr>
+<tr><td>Weights</td><td><code>model.safetensors</code>, bf16, 4,255,140,312 bytes, SHA-256 <code>61367c8e…a27054</code></td></tr>
+<tr><td>Image processor</td><td>min_pixels 100,352 (128·28·28), max_pixels 301,056 (384·28·28), stored in <code>processor_config.json</code></td></tr>
+<tr><td>LoRA settings (both adapters)</td><td>rank 64, alpha 128, dropout 0.05, LLM layers only, vision encoder frozen</td></tr>
+<tr><td>Decoding</td><td>greedy (<code>do_sample=False</code>), max 96 new tokens for CoC. The shipped <code>generation_config.json</code> turns sampling on (T 0.7), so callers must switch it off.</td></tr>
+<tr><td>Software</td><td>transformers ≥ 5.0 [8], PyTorch; vLLM [7] for the large judge models</td></tr>
+</table></div>
+</section>
+
+<section id="method">
+<h2>3. Methodology</h2>
+
+<h3>3.1 Data</h3>
+<ul>
+<li><strong>Indian CoC data.</strong> 62,487 training samples from front-camera drives in Indian cities. Each sample is four frames plus one decision-and-reason sentence, in the Chain-of-Causation style of Alpamayo-R1 [4]. The Delhi and kota_out drives are held out and never trained on.</li>
+<li><strong>Object-detection pipeline behind the labels.</strong> YOLO [12] detects objects on 741,359 frames. Qwen3-VL-32B [1] then checks the objects, the road layout and the ego decision through vLLM [7], with rule-based consistency filters.</li>
+<li><strong>Open driving VQA.</strong> 24 public datasets listed by Qwen-Drive [10] were collected, including DriveLM [11] and nuScenes-based sets. They were used in earlier experiments (Section 6.3). WaymoQA [13] is test-only and was never trained on.</li>
+<li><strong>LingoQA</strong> [6] train questions were used for the RFT stage. The 500 LingoQA validation questions are only for scoring and were never trained on.</li>
+</ul>
+
+<h3>3.2 Stage 1: 68.6 model (coc_student_alpamayo)</h3>
+<p>Full fine-tune of Qwen3-VL-2B on the Indian CoC data in the Alpamayo CoC format, 3 epochs. LingoQA 68.6, WaymoQA 54.0.</p>
+
+<h3>3.3 Stage 2: RFT LoRA, 72.2 model (merged_rft_ck500)</h3>
+<p>Rejection-sampling fine-tuning (RFT) [9]: the 68.6 model trains on its own best answers.</p>
+<ol>
+<li>The 68.6 model sampled 8 answers for each of 10,000 LingoQA-train prompts (temperature 0.7, top-p 0.95).</li>
+<li>Lingo-Judge [6] scored every answer against the train reference. The mean pass rate was 49.5%.</li>
+<li>The best correct answer per prompt was kept: 8,490 answers (8,190 train, 300 validation), mean 27.9 words. Answers that just copied the literal text "action, justification" were removed.</li>
+<li>A LoRA was trained on these plus 3,000 CoC samples: lr 2e-5, warmup 30, global batch 16, 1 epoch, adapter saved every 100 steps.</li>
+<li>Step 500 scored 72.2 and was merged into the weights. All checkpoints from step 200 on scored 70.2–72.2.</li>
+</ol>
+
+<h3>3.4 Stage 3: speed-bump fix LoRA, 73.2 model (final)</h3>
+<p><strong>Problem.</strong> In vehicle and video tests the 72.2 model said "slow down due to the speed bump" 33–57% of the time, mostly on yellow-black painted kerbs. 12.1% of the CoC training answers (7,554 of 62,487) mentioned a speed bump.</p>
+<p><strong>Label check.</strong> Qwen3.5-27B [3] was run through vLLM [7] on the four frames of each of those 7,554 samples, with a strict yes/no question. The question says that kerbs, dividers, barriers and flat zebra crossings are not speed bumps. Settings: temperature 0, thinking off, 8 tokens.</p>
+<div class="tbl"><table>
+<tr><th>Group</th><th class="n">n</th><th class="n">YES (bump visible)</th><th class="n">NO</th><th class="n">Unclear</th></tr>
+<tr><td>Answers mentioning a speed bump</td><td class="n">7,554</td><td class="n">79 (1.0%)</td><td class="n">7,403 (98.0%)</td><td class="n">72 (1.0%)</td></tr>
+<tr><td>Control: random "maintain" answers</td><td class="n">300</td><td class="n">0 (0%)</td><td class="n">297 (99.0%)</td><td class="n">3 (1.0%)</td></tr>
+</table></div>
+<p><strong>Cleaning.</strong> The 7,475 speed-bump samples without a confirmed bump were dropped. That leaves 55,012 CoC samples, of which 0.14% mention a speed bump (was 12.1%).</p>
+<p><strong>Training.</strong> A LoRA on the 72.2 model, trained on 16,000 random cleaned CoC samples plus the 8,190 RFT LingoQA answers (24,190 samples), keeps the LingoQA skill. Settings: r 64, α 128, lr 2e-5, warmup 30, batch 2 × 8 gradient accumulation, 1 epoch = 1,512 steps, saved every 150 steps. The best validation loss was 0.6654 at step 1500.</p>
+<p><strong>Selection.</strong> Every checkpoint was scored on LingoQA. Step 1500 scored highest (73.2) and was merged into <code>merged_sbfix_ck1500</code>.</p>
+</section>
+
+<section id="input">
+<h2>4. Input pipeline</h2>
+<p>One user turn is <code>[frame 1, frame 2, frame 3, frame 4, prompt]</code>, oldest frame first, in the Qwen chat template. The prompt must be exactly the training text:</p>
+<pre>These are 4 front-view camera frames captured by the ego vehicle in the seconds leading up to a driving decision, in time order. The last frame, frame 4, is the decision moment (t=0.0s).
+
+You are given ONLY these frames -- no speed, trajectory or meta-action channel. Read the ego vehicle's own motion out of how the scene moves across the frames.
+
+In one sentence, state what the ego vehicle did at the decision moment and why, on Indian roads: the driving decision, followed by the reason for it. Cite only what is already visible in these frames.</pre>
+<div class="tbl"><table>
+<tr><th>Setting</th><th>Training setup</th><th>Vehicle setup (default in <code>live_coc_single.py</code>)</th></tr>
+<tr><td>Frame spacing</td><td>0.25 s (4 Hz), span 0.75 s</td><td>0.1 s (10 Hz), span 0.3 s</td></tr>
+<tr><td>Frame size</td><td>full frames; the processor resizes 1280×720 to ~704×384</td><td>frames 1–3 at 256×144, frame 4 at 512×288</td></tr>
+<tr><td>Speed-bump rate, Hyderabad</td><td>1%</td><td>0%</td></tr>
+<tr><td>Speed-bump rate, test track</td><td>10%</td><td>17%</td></tr>
+</table></div>
+<p>Only the first sentence of the answer is shown on screen. Some training answers repeat a tail such as "A mandatory speed limit sign is observed…", and that tail is cut off. The full answer is still written to the CSV log.</p>
+</section>
+
+<section id="deploy">
+<h2>5. How to deploy</h2>
+<h3>5.1 Install</h3>
+<pre>python3 -m venv ~/coc_live &amp;&amp; source ~/coc_live/bin/activate
+pip install torch torchvision                    # CUDA build for the vehicle GPU
+pip install -r deployment/requirements_live.txt  # transformers &gt;= 5.0</pre>
+<h3>5.2 Run in real time (one CoC line)</h3>
+<pre>python3 deployment/live_coc_single.py                      # webcam 0
+python3 deployment/live_coc_single.py --source 1           # second camera
+python3 deployment/live_coc_single.py --source rtsp://&lt;camera-ip&gt;/stream
+python3 deployment/live_coc_single.py --source drive.mp4 --no_display --out_video drive_coc.mp4</pre>
+<p>How the script works:</p>
+<ul>
+<li>It keeps the last second of frames in memory.</li>
+<li>When the model is free, it builds the 4-frame window ending at "now" and runs the model in a background thread, so the video never freezes.</li>
+<li>It draws <code>CoC: &lt;decision + reason&gt;</code> on the video.</li>
+<li>Every answer is logged to <code>live_coc_answers.csv</code>.</li>
+<li>Keys: <code>p</code> pauses, <code>q</code> quits.</li>
+</ul>
+<h3>5.3 Question answering mode</h3>
+<pre>python3 deployment/live_camera_vqa.py --question "Is it safe to overtake now?" --ask_every 10</pre>
+<h3>5.4 Hardware</h3>
+<ul>
+<li><strong>NVIDIA GPU.</strong> 0.4–0.6 s per answer on an A40 in bf16. The weights alone are 4.26 GB.</li>
+<li><strong>CPU only.</strong> Several seconds per answer, so the display text lags behind the scene.</li>
+</ul>
+<p>All commands, including server evaluation and rebuilding the model, are in <code>COMMANDS.txt</code>.</p>
+</section>
+
+<section id="results">
+<h2>6. Results</h2>
+<h3>6.1 LingoQA across the lineage</h3>
+<p>Scored on the 500 validation questions with Lingo-Judge [6], greedy decoding.</p>
+<div class="tbl"><table>
+<tr><th>Model</th><th class="n">LingoQA</th><th class="n">WaymoQA All</th><th class="n">Spatial test</th></tr>
+<tr><td>Qwen3-VL-2B-Instruct (base)</td><td class="n">46.2</td><td class="n">56.77</td><td class="n">56.2</td></tr>
+<tr><td>coc_student_alpamayo</td><td class="n">68.6</td><td class="n">54.00</td><td class="n">51.3</td></tr>
+<tr><td>merged_rft_ck500</td><td class="n">72.2</td><td class="n">52.69</td><td class="n">50.7</td></tr>
+<tr class="best"><td>merged_sbfix_ck1500 (final)</td><td class="n">73.2</td><td class="n">not run</td><td class="n">not run</td></tr>
+</table></div>
+<p class="small">The 72.2 model was re-run 100 times. Every run scored 72.2 and all 500 answers were identical, so with greedy decoding the score is exact and repeatable.</p>
+
+<h3>6.2 Checkpoint selection, speed-bump-fix LoRA</h3>
+<div class="tbl"><table>
+<tr><th>Step</th><th class="n">150</th><th class="n">300</th><th class="n">450</th><th class="n">600</th><th class="n">750</th><th class="n">900</th><th class="n">1050</th><th class="n">1200</th><th class="n">1350</th><th class="n">1500</th><th class="n">1512</th></tr>
+<tr><td>LingoQA</td><td class="n">71.2</td><td class="n">68.6</td><td class="n">70.0</td><td class="n">72.0</td><td class="n">70.2</td><td class="n">71.0</td><td class="n">72.2</td><td class="n">72.8</td><td class="n">73.0</td><td class="n"><strong>73.2</strong></td><td class="n">72.4</td></tr>
+</table></div>
+
+<h3>6.3 Earlier experiments that were not chosen</h3>
+<div class="tbl"><table>
+<tr><th>Run</th><th>Data</th><th class="n">LingoQA</th><th>Why not chosen</th></tr>
+<tr><td>coc24_v1</td><td>CoC + open VQA + grounding</td><td class="n">51.4</td><td>98 of 500 answers were the literal "action, justification"</td></tr>
+<tr><td>coc24_v2_open</td><td>CoC + open VQA</td><td class="n">53.4</td><td>Best WaymoQA (58.7), but LingoQA −15</td></tr>
+<tr><td>coc24_v3_tibrad</td><td>TiBrad + open VQA</td><td class="n">59.0</td><td>Literal-format answers remained</td></tr>
+<tr><td>Weight merges</td><td>a·68.6 + (1−a)·v3</td><td class="n">≤ 64.4</td><td>None beat 68.6</td></tr>
+<tr><td>lora_l_v1</td><td>LingoQA-train answers, 80k</td><td class="n">63.4</td><td>Answers became short and less grounded</td></tr>
+<tr><td>lora_ttfix_v1 (ckpt 900)</td><td>+ 27B-labelled test-track windows</td><td class="n">71.4</td><td>See Section 7</td></tr>
+</table></div>
+
+<h3>6.4 Video tests: "speed bump" answers</h3>
+<p>One decision every 2 s. Hyderabad1.mp4: city, 232 s, 1920×1080. cam_20261106_100001.mp4: TiHAN test track, 416 s, 1920×1200.</p>
+<div class="tbl"><table>
+<tr><th>Video</th><th>Setup</th><th class="n">72.2 model</th><th class="n">Final 73.2</th></tr>
+<tr><td>Hyderabad</td><td>training</td><td class="n">43%</td><td class="n">1%</td></tr>
+<tr><td>Hyderabad</td><td>vehicle</td><td class="n">33%</td><td class="n">0%</td></tr>
+<tr><td>Test track</td><td>training</td><td class="n">52%</td><td class="n">10%</td></tr>
+<tr><td>Test track</td><td>vehicle</td><td class="n">57%</td><td class="n">17%</td></tr>
+</table></div>
+<p>Answers became more varied too:</p>
+<ul>
+<li><strong>Hyderabad, vehicle setup:</strong> 52% stop/slow, 48% keep speed. Before, "slow down" dominated.</li>
+<li><strong>Test track, vehicle setup:</strong> 83% stop/slow, 13% keep, 4% speed up.</li>
+</ul>
+<div class="ok">Live test on 60 s of Hyderabad (A40, vehicle setup): 118 answers, 22 different ones, no speed-bump answers. The most common were "Maintain speed due to the lead vehicle ahead" and "Slow down due to the lead vehicle ahead", plus "Stop due to the lead vehicle blocking the lane" when traffic stopped.</div>
+
+<h3>6.5 Testbed drive, 11 Nov 2026 (screencast)</h3>
+<p>The model was run live with the autonomous stack on the campus testbed. 230 CoC answers over about 17 minutes. The reference clip <code>reference_clip/testbed_coc_5min_210s-510s.mp4</code> is the 5-minute stretch from 3:30 to 8:30 with the most scenario types.</p>
+<p><strong>Correct:</strong></p>
+<ul>
+<li>pedestrians crossing (yield, stop)</li>
+<li>cross traffic (stop)</li>
+<li>parked or stopped vehicles (nudge right)</li>
+<li>motorcycles and cyclists</li>
+<li>cones</li>
+<li>the roundabout</li>
+<li>a red traffic light</li>
+<li>clear road ("Maintain lane because of clear path ahead")</li>
+</ul>
+<p><strong>Wrong:</strong> about 25% of answers still said "speed bump". Only one stretch of the drive had a painted bump, at about 10:00 in the full screencast. The model also sometimes said "sharp curve" on straight road.</p>
+</section>
+
+<section id="limits">
+<h2>7. Limitations and the test-track experiment</h2>
+<ul>
+<li>On roads unlike the training cities (the TiHAN test track and campus roads), yellow-black kerbs and road-edge markings still sometimes produce "speed bump" or "sharp curve".</li>
+<li>The model reads motion only from the four frames. It has no speed, steering or map input.</li>
+<li>Answers are one sentence and advisory only.</li>
+</ul>
+<p><strong>Test-track experiment (lora_ttfix_v1).</strong> Qwen3.5-27B labelled 1,362 windows from the two clean test-track recordings. The "maintain" labels were capped at 400 windows, so the model would not learn a single answer. A LoRA was trained on these labels plus cleaned CoC and LingoQA data. It was tested on 116 s of test track held out from training:</p>
+<div class="tbl"><table>
+<tr><th>Measure</th><th class="n">Final 73.2</th><th class="n">ttfix step 900</th></tr>
+<tr><td>"Speed bump" answers, held-out test track</td><td class="n">17–33%</td><td class="n">0%</td></tr>
+<tr><td>Agrees with 27B decision, held-out test track</td><td class="n">12–14%</td><td class="n">91%</td></tr>
+<tr><td>LingoQA</td><td class="n"><strong>73.2</strong></td><td class="n">71.4</td></tr>
+<tr><td>Hyderabad "keep speed" share (vehicle setup)</td><td class="n">48%</td><td class="n">86%</td></tr>
+</table></div>
+<p>The experiment fixed the test track but lowered LingoQA. It also made the model less cautious in the city: it missed "slow down for the curve" at chevron-marked bends. The 73.2 model was therefore kept as the final model. The next step is clean camera recordings (no overlays) of the campus route, labelled the same way.</p>
+</section>
+
+<section id="package">
+<h2>8. Package contents</h2>
+<div class="tbl"><table>
+<tr><th>Path</th><th>Contents</th></tr>
+<tr><td><code>model/merged_sbfix_ck1500/</code></td><td>Final model (weights, tokenizer, processor, chat template, MERGE_INFO.txt)</td></tr>
+<tr><td><code>checkpoint/lora_sbfix_v1_checkpoint-1500/</code></td><td>The merged LoRA adapter, its optimizer state and the training logs</td></tr>
+<tr><td><code>code/training/</code></td><td><code>train_24coc.py</code>, <code>merge_lora.py</code>, <code>train_lora_sbfix.sbatch</code>, <code>train_lora_rft.sbatch</code>, <code>rft_build.py</code>, <code>rft_data.sbatch</code></td></tr>
+<tr><td><code>code/data_cleaning/</code></td><td><code>verify_speed_bump.py</code>, <code>verify_sb.sbatch</code>, <code>build_sbfix.py</code></td></tr>
+<tr><td><code>code/evaluation/</code></td><td>LingoQA (<code>generate_predictions.py</code>, <code>eval_lora_ckpts.sbatch</code>, <code>repeat_lingoqa.sbatch</code>), WaymoQA, spatial, video test</td></tr>
+<tr><td><code>deployment/</code></td><td><code>live_coc_single.py</code>, <code>live_camera_vqa.py</code>, <code>make_single_overlay.py</code>, <code>requirements_live.txt</code></td></tr>
+<tr><td><code>results/</code></td><td>LingoQA scores, speed-bump cleanup summaries, video test answers and summaries</td></tr>
+<tr><td><code>reference_clip/</code></td><td>5-minute testbed reference clip</td></tr>
+<tr><td><code>OVERVIEW_SUMMARY.txt</code>, <code>COMMANDS.txt</code></td><td>Short summary and every command</td></tr>
+</table></div>
+<p class="small">Server copy: <code>ai24mtech02003@192.168.20.120:/data/common_datasets/ai24mtech02003/24_dataset_coc/</code> (models/, data/sbfix, data/clean_sb, eval/, scripts/).</p>
+</section>
+
+<section id="refs">
+<h2>9. References</h2>
+<ol class="refs">
+<li>S. Bai <em>et al.</em>, "Qwen3-VL technical report," <em>arXiv preprint</em> arXiv:2511.21631, 2025.</li>
+<li>S. Bai <em>et al.</em>, "Qwen2.5-VL technical report," <em>arXiv preprint</em> arXiv:2502.13923, 2025.</li>
+<li>A. Yang <em>et al.</em>, "Qwen3 technical report," <em>arXiv preprint</em> arXiv:2505.09388, 2025.</li>
+<li>Y. Wang <em>et al.</em>, "Alpamayo-R1: Bridging reasoning and action prediction for generalizable autonomous driving in the long tail," <em>arXiv preprint</em> arXiv:2511.00088, 2025.</li>
+<li>E. J. Hu <em>et al.</em>, "LoRA: Low-rank adaptation of large language models," in <em>Proc. Int. Conf. Learn. Represent. (ICLR)</em>, 2022.</li>
+<li>A.-M. Marcu <em>et al.</em>, "LingoQA: Visual question answering for autonomous driving," in <em>Proc. Eur. Conf. Comput. Vis. (ECCV)</em>, 2024.</li>
+<li>W. Kwon <em>et al.</em>, "Efficient memory management for large language model serving with PagedAttention," in <em>Proc. 29th ACM Symp. Operating Syst. Princ. (SOSP)</em>, 2023, pp. 611–626.</li>
+<li>T. Wolf <em>et al.</em>, "Transformers: State-of-the-art natural language processing," in <em>Proc. Conf. Empirical Methods Natural Lang. Process.: Syst. Demonstrations (EMNLP)</em>, 2020, pp. 38–45.</li>
+<li>Z. Yuan <em>et al.</em>, "Scaling relationship on learning mathematical reasoning with large language models," <em>arXiv preprint</em> arXiv:2308.01825, 2023.</li>
+<li>Qwen Team, "Qwen-Drive-1.0: An initial step towards a vision-language foundation model for autonomous driving," <em>arXiv preprint</em> arXiv:2609.00111, 2026.</li>
+<li>C. Sima <em>et al.</em>, "DriveLM: Driving with graph visual question answering," in <em>Proc. Eur. Conf. Comput. Vis. (ECCV)</em>, 2024.</li>
+<li>G. Jocher, J. Qiu, and A. Chaurasia, "Ultralytics YOLO," software, GitHub: ultralytics/ultralytics, 2023.</li>
+<li>WaymoQA benchmark, image split (5,519 multiple-choice questions), used for evaluation only.</li>
+</ol>
+<p class="small">[13] is listed by name only because its full bibliographic entry was not available in the project files.</p>
+</section>
+</main>
+</body>
+</html>

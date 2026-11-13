@@ -1,0 +1,9 @@
+# Model weights / checkpoints are not stored in git
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.mp4
+__pycache__/
+*.pyc

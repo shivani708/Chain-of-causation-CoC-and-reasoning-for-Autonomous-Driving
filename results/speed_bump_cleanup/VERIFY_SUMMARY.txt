@@ -1,0 +1,3 @@
+Qwen3.5-27B speed-bump check of CoC training answers (10 Nov 2026 19:11)
+speed_bump    n= 7554  YES 79 (1.0%)  NO 7403 (98.0%)  UNCLEAR 72 (1.0%)
+control_keep  n=  300  YES 0 (0.0%)  NO 297 (99.0%)  UNCLEAR 3 (1.0%)
